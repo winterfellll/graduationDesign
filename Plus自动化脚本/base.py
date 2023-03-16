@@ -19,6 +19,8 @@ user_import_path = assetsPath + '1.xls'
 
 # v1.7.5.1.0
 class base():
+    wengao_lanmu = '/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[8]'
+    qita_lanmu = '/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[7]'
 
     def __init__(self, module):
         # 无头模式启动

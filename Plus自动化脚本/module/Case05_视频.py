@@ -346,7 +346,8 @@ class test(unittest.TestCase):
         sleep(2)
         self.plus.fc('body > div.modal.fade.ng-isolate-scope.content-time-modal.in > div > div > div > div.modal-footer > button.btn.primary-btn.ng-binding.ng-isolate-scope').click()  # 保存
         sleep(2)
-        length1 = len(self.plus.finds('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[5]/span[2]'))
+        length1 = len(self.plus.finds(base.qita_lanmu + '/span[2]'))
+
         text5 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[4]/div[1]/span').text
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[11]/div/i')
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[11]/div/div/div/button[15]')  # 审核
@@ -445,7 +446,7 @@ class test(unittest.TestCase):
             'body > div.modal.fade.ng-isolate-scope.content-publish-modal.in > div > div > div > div:nth-child(2) > div.column-wrap > div.column_content.ng-isolate-scope > ks-swiper-container > div > div.swiper-wrapper > div.swiper-slide.list_box.swiper-slide.swiper-slide-active > div > div:nth-child(5) > input[type=checkbox]').click()
         self.plus.fc('body > div.modal.fade.ng-isolate-scope.content-publish-modal.in > div > div > div > div.modal-footer > button:nth-child(2)').click()
         sleep(3)
-        length = len(self.plus.finds('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[5]/span/a'))
+        length = len(self.plus.finds(base.qita_lanmu + '/span/a'))
 
         ac(self.plus.driver).scroll_by_amount(0, -500).perform()
         sleep(2)
@@ -514,7 +515,7 @@ class test(unittest.TestCase):
         sleep(5)
         ac(self.plus.driver).scroll_by_amount(0, -500).perform()
         sleep(2)
-        text1 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[5]/span/a').text
+        text1 = self.plus.find(base.qita_lanmu + '/span/a').text
 
         ac(self.plus.driver).scroll_by_amount(0, -500).perform()
         sleep(2)
@@ -533,7 +534,7 @@ class test(unittest.TestCase):
         self.plus.fc('body > div.modal.fade.ng-isolate-scope.setLabel-modal.in > div > div > div > div.modal-body > div.column-wrap > div.item-content > div:nth-child(1) > input[type=checkbox]').click()
         self.plus.fc('body > div.modal.fade.ng-isolate-scope.setLabel-modal.in > div > div > div > div.modal-footer.flex-item > button.btn.primary-btn.ng-isolate-scope').click()
         sleep(2)
-        length = len(self.plus.finds('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[5]/div[1]/span'))
+        length = len(self.plus.finds(base.qita_lanmu + '/div[1]/span'))
 
         self.assertEqual(text1, '发现', '选择栏目按钮失效')
         self.assertEqual(text2, '审核中', '提审按钮失效')

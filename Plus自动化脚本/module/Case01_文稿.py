@@ -428,7 +428,7 @@ class test(unittest.TestCase):
         self.plus.click('/html/body/div[7]/div/div/div/div[2]/div[1]/div[2]/ks-swiper-container/div/div[2]/div[1]/div/div[1]/input')
         self.plus.click('/html/body/div[7]/div/div/div/div[4]/button[2]')
         sleep(3)
-        length = len(self.plus.finds('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[6]/span/a'))
+        length = len(self.plus.finds(base.wengao_lanmu + '/span/a'))
 
         ac(self.plus.driver).scroll_by_amount(0, -500).perform()
         sleep(2)
@@ -488,7 +488,7 @@ class test(unittest.TestCase):
         self.plus.click('/html/body/div[7]/div/div/div/div[2]/div[1]/div[2]/ks-swiper-container/div/div[2]/div/div/div[5]/input')
         self.plus.click('/html/body/div[7]/div/div/div/div[3]/button[1]')
         sleep(2)
-        text1 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[6]/span/a').text
+        text1 = self.plus.find(base.wengao_lanmu + '/span/a').text
 
         ac(self.plus.driver).scroll_by_amount(0, -500).perform()
         sleep(2)
