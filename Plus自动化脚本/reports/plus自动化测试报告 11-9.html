@@ -1,0 +1,4560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title> 自动化测试报告 </title>
+    <meta name="generator" content="XTestRunner 1.4.4" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://img.itest.info/seldom-main.css">
+    <link rel="stylesheet" href="http://img.itest.info/seldom-utilities.css">
+
+    <style type="text/css" media="screen">
+    body {
+        font-family: verdana, arial, helvetica, sans-serif;
+        font-size: 80%;
+    }
+
+    table {
+        font-size: 100%;
+    }
+
+    .table td {
+        white-space: inherit !important;
+    }
+
+    /* -- heading ---------------------------------------------------------------------- */
+    h1 {
+        font-size: 16pt;
+        color: gray;
+    }
+
+    pre {
+        background-color: #eef2f7;
+        padding-top: 10px;
+        text-align: left;
+        max-height: 600px;
+        overflow: auto;
+    }
+
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+        background-color: #F5F5F5;
+    }
+
+    ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 10px;
+        background-color: rgba(114,124,245,.25);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #6c757d;
+    }
+
+    .heading {
+        margin-top: 20px;
+        margin-bottom: 1ex;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 23%;
+        float: left;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-bottom: 10px;
+        padding-right: 10px;
+        box-shadow: 0px 0px 5px #000;
+    }
+
+    .heading .attribute {
+        margin-top: 1ex;
+        margin-bottom: 0;
+    }
+
+    .heading .description {
+        margin-top: 4ex;
+        margin-bottom: 6ex;
+    }
+
+    /* -- css div popup ------------------------------------------------------------------------ */
+
+    a.popup_link:hover {
+        color: red;
+    }
+
+    .log_window {
+        max-width: 70%;
+        max-height: 70%;
+    }
+
+    /* -- report ------------------------------------------------------------------------ */
+    .show_detail_line {
+        margin-left: 10px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .show_detail_button {
+        margin-top: 3ex;
+        margin-bottom: 1ex;
+        margin-left: 10px;
+        text-align: right;
+        margin-right: 15px;
+    }
+
+    .header_row {
+        font-weight: bold;
+        color: #606060;
+        border-top-width: 10px;
+        border-color: #d6e9c6;
+        font-size: 15px;
+    }
+
+    .total_row {
+        font-weight: bold;
+        background-color: #dee2e6;
+    }
+
+    .passClass {
+        background-color: #ccf5e7;
+    }
+
+    .failClass {
+        background-color: #ffe8cc;
+    }
+
+    .errorClass {
+        background-color: #ffd6e0;
+    }
+
+    .passCase {
+        color: #00CC88;
+        font-weight: bold;
+    }
+
+    .failCase {
+        color: #FF8C00;
+        font-weight: bold;
+    }
+
+    .errorCase {
+        color: #FF3366;
+        font-weight: bold;
+    }
+
+    .hiddenRow {
+        display: none;
+    }
+
+    .caseStatistics {
+        width: 46%
+    }
+
+    .none {
+        color: #009900
+    }
+
+    .testcase {
+        margin-left: 2em;
+    }
+
+    /* -- chars ---------------------------------------------------------------------- */
+    .testChars {
+        width: 900px;
+        margin-left: 0px;
+    }
+
+    .error-color {
+        color: #fff;
+        background-color: #f44455;
+        border-color: #f44455;
+    }
+
+    .pass-color {
+        color: #fff;
+        background-color: #5fc27e;
+        border-color: #5fc27e;
+    }
+
+    .fail-color {
+        color: #fff;
+        background-color: #fcc100;
+        border-color: #fcc100;
+    }
+
+    .skip-color {
+        color: #fff;
+        background-color: #6c757d;
+        border-color: #6c757d;
+    }
+
+    /* -- screenshots ---------------------------------------------------------------------- */
+    .img {
+        border-collapse: collapse;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .img-card {
+        height: 600px;
+        width:800px;
+        background-color: #e7eaf0;
+    }
+
+    .img-circle {
+        height: 20px;
+        border-radius: 12px;
+        background-color: red;
+        padding-left: 13px;
+        margin: 0 auto;
+        position: relative;
+        top: -40px;
+        background-color: rgba(1, 150, 0, 0.3);
+    }
+
+    .img-circle font {
+        border: 1px solid white;
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        margin-right: 9px;
+        margin-top: 4px;
+        display: block;
+        float: left;
+        background-color: white;
+    }
+
+    .close-shots {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        z-index: 99;
+    }
+
+    .footer {
+        height: 50px;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+    }
+
+    #headContainer {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .head-list {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    #resultContainer {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+
+</style>
+</head>
+
+<body style="background-color: #f5f9fc;">
+    <script language="javascript" type="text/javascript">
+        function showLog(id) {
+            document.body.style.overflow = 'hidden'
+            document.body.style.height='100%'
+            document.getElementById(id).style.display = 'block'
+        }
+
+        function hideLog(id) {
+            document.body.style.overflow = 'auto';
+            document.getElementById(id).style.display = 'none'
+        }
+
+        function showImg(obj) {
+            document.body.style.overflow = 'hidden'
+            document.body.style.height='100%'
+            var nextObj = obj.nextElementSibling
+            nextObj.style.display = 'block'
+            var index = 0;   //每张图片的下标，
+            var len = nextObj.getElementsByTagName('img').length;
+            var imgCircle = nextObj.getElementsByClassName('img-circle')[0]
+            nextObj.onmouseover = function () {  //当鼠标光标停在图片上，则停止轮播
+                clearInterval(start);
+            }
+            nextObj.onmouseout = function () {  //当鼠标光标停在图片上，则开始轮播
+                start = setInterval(autoPlay, 1000);
+            }
+            for (var i = 0; i < len; i++) {
+                var fontTag = document.createElement('font')
+                imgCircle.appendChild(fontTag)
+            }
+            var fontTagList = nextObj.getElementsByTagName('font');  //得到所有圆圈
+            changeImg(0)
+            var funny = function (i) {
+                fontTagList[i].onmouseover = function () {
+                    index = i
+                    changeImg(i)
+                }
+            }
+            for (var i = 0; i < fontTagList.length; i++) {
+                funny(i);
+            }
+
+            function autoPlay() {
+                if (index > len - 1) {
+                    index = 0;
+                    clearInterval(start); //运行一轮后停止
+                }
+                changeImg(index++);
+            }
+            imgCircle.style.width = 30 * len + "px";
+            // 对应圆圈和图片同步
+            function changeImg(index) {
+                var imgTags = nextObj.getElementsByTagName('img');
+                var fontTags = nextObj.getElementsByTagName('font');
+                for (i=0; i < fontTags.length; i++) {
+                    imgTags[i].style.display = 'none';
+                    fontTags[i].style.backgroundColor = 'white';
+                }
+                imgTags[index].style.display = 'block';
+                if (fontTags.length > 0) {
+                    fontTags[index].style.backgroundColor = 'red';
+                }
+            }
+        }
+
+        function hideImg(obj) {
+            document.body.style.overflow = 'auto';
+            obj.parentElement.parentElement.parentElement.parentElement.parentElement.style.display = "none";
+            obj.parentElement.parentElement.parentElement.getElementsByClassName('img-circle')[0].innerHTML = "";
+        }
+
+        output_list = Array();
+        /* level 
+        - 0:Summary
+        - 1:Failed 
+        - 2:Skip
+        - 3:All 
+        */
+        function showCase(level, channel) {
+            trs = document.getElementsByTagName("tr");
+            for (var i=0; i < trs.length; i++) {
+                tr = trs[i];
+                id = tr.id;
+                if (["ft", "pt", "et", "st"].indexOf(id.substr(0, 2)) != -1) {
+                    if (level == 0 && id.substr(2, 1) == channel) {
+                        tr.className = 'hiddenRow';
+                    }
+                }
+                if (id.substr(0, 3) == 'pt' + channel) {
+                    if (level == 1) {
+                        tr.className = '';
+                    }
+                    else if (level > 4 && id.substr(2, 1) == channel) {
+                        tr.className = '';
+                    }
+                    else {
+                        tr.className = 'hiddenRow';
+                    }
+                }
+                if (id.substr(0, 3) == 'ft' + channel) {
+                    if (level == 2) {
+                        tr.className = '';
+                    }
+                    else if (level > 4 && id.substr(2, 1) == channel) {
+                        tr.className = '';
+                    }
+                    else {
+                        tr.className = 'hiddenRow';
+                    }
+                }
+                if (id.substr(0, 3) == 'et' + channel) {
+                    if (level == 3) {
+                        tr.className = '';
+                    }
+                    else if (level > 4 && id.substr(2, 1) == channel) {
+                        tr.className = '';
+                    }
+                    else {
+                        tr.className = 'hiddenRow';
+                    }
+                }
+                if (id.substr(0, 3) == 'st' + channel) {
+                    if (level == 4) {
+                        tr.className = '';
+                    }
+                    else if (level > 4 && id.substr(2, 1) == channel) {
+                        tr.className = '';
+                    }
+                    else {
+                        tr.className = 'hiddenRow';
+                    }
+                }
+            }
+        }
+        function showClassDetail(cid, count) {
+            var id_list = Array(count);
+            var toHide = 1;
+            for (var i=0; i < count; i++) {
+                tid0 = 't' + cid.substr(1) + '.' + (i + 1);
+                tid = 'f' + tid0;
+                tr = document.getElementById(tid);
+                if (!tr) {
+                    tid = 'p' + tid0;
+                    tr = document.getElementById(tid);
+                }
+                if (!tr) {
+                    tid = 'e' + tid0;
+                    tr = document.getElementById(tid);
+                }
+                if (!tr) {
+                    tid = 's' + tid0;
+                    tr = document.getElementById(tid);
+                }
+                id_list[i] = tid;
+                if (tr.className) {
+                    toHide = 0;
+                }
+            }
+            for (var i = 0; i < count; i++) {
+                tid = id_list[i];
+                if (toHide) {
+                    document.getElementById(tid).className = 'hiddenRow';
+                }
+                else {
+                    document.getElementById(tid).className = '';
+                }
+            }
+        }
+        function showTestDetail(div_id) {
+            var detailsDiv = document.getElementById(div_id)
+            var displayState = detailsDiv.style.display
+
+            if (displayState != 'block') {
+                displayState = 'block'
+                detailsDiv.style.display = 'block'
+            }
+            else {
+                detailsDiv.style.display = 'none'
+            }
+        }
+        function html_escape(s) {
+            s = s.replace(/&/g, '&amp;');
+            s = s.replace(/</g, '&lt;');
+            s = s.replace(/>/g, '&gt;');
+            return s;
+        }
+    </script>
+
+    <nav class="navbar navbar-light position-lg-sticky top-lg-0 d-none d-lg-block overlap-10 flex-none bg-white border-bottom px-0 py-3" id="topbar">
+    <div class="container-fluid">
+        <div class="hstack gap-2">
+            <a href="https://github.com/SeldomQA/XTestRunner">
+                <img src="http://img.itest.info/XTestRunner_logo.jpg" style="height: 2.25rem;">
+            </a>
+        </div>
+        <div class="navbar-user d-none d-sm-block">
+            <div class="hstack gap-3 ms-4">
+                <h3 style="float: right;"> 自动化测试报告 </h3>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div id="headContainer" class="container-fluid mm-active">
+    <div class="row">
+        <div class="col-12 col-lg-5 col-xl-4 d-flex" style="float:left">
+            <div class='card flex-fill'>
+                <div class="card-header">
+                    <div class="d-flex align-items-center">
+                        <h5 class="mb-0">Overview</h5>
+                    </div>
+                </div>
+                <div class="card-body py-0 position-relative scrollable-y" style="max-height:300px">
+                    <div class="list-group list-group-flush">
+                        <div class="list-group-item px-0 position-relative hstack flex-wrap head-list">
+                            <div class="flex-1">
+                                <div class="d-flex align-items-center mb-1">Tester</div>
+                                <div class="d-flex align-items-center">
+                                    <div class="text-sm text-muted line-clamp-1 me-auto">Anonymous</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-group-item px-0 position-relative hstack flex-wrap head-list">
+                            <div class="flex-1">
+                                <div class="d-flex align-items-center mb-1">Start time - End time</div>
+                                <div class="d-flex align-items-center">
+                                    <div class="text-sm text-muted line-clamp-1 me-auto">2022-11-09 11:45:52 - 2022-11-09 12:34:20</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-group-item px-0 position-relative hstack flex-wrap head-list">
+                            <div class="flex-1">
+                                <div class="d-flex align-items-center mb-1">Duration</div>
+                                <div class="d-flex align-items-center">
+                                    <div class="text-sm text-muted line-clamp-1 me-auto">0:48:27.245</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-group-item px-0 position-relative hstack flex-wrap head-list">
+                            <div class="flex-1">
+                                <div class="d-flex align-items-center mb-1">Status</div>
+                                <div class="d-flex align-items-center">
+                                    <div class="text-sm text-muted line-clamp-1 me-auto">
+                                        <span class="badge badge-pill bg-soft-success text-success me-2">Passed:136</span>
+                                        <span class="badge badge-pill bg-soft-warning text-warning me-2">Failed:27</span>
+                                        <span class="badge badge-pill bg-soft-danger text-danger me-2">Errors:8</span>
+                                        <span class="badge badge-pill bg-soft-secondary text-secondary me-2">Skipped:0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-group-item px-0 position-relative hstack flex-wrap" style="padding-top: 5px;">
+                            <div class="flex-1">
+                                <div class="d-flex align-items-center mb-1">Description</div>
+                                <div class="d-flex align-items-center">
+                                    <div class="text-sm text-muted me-auto">自动化测试报告</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="width: 20%">
+            <div class="card" style="height: 45%;">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col"><span class="h6 font-semibold text-muted text-sm d-block mb-2">Passed</span>
+                            <span class="h3 font-bold mb-0">136</span>
+                        </div>
+                        <div class="col-auto">
+                            <div class="icon icon-shape bg-success text-white text-lg rounded-circle">P</div>
+                        </div>
+                    </div>
+                    <div class="mt-2 mb-0 text-sm">
+                        <span class="badge badge-pill bg-soft-success text-success me-2">79.53%</span>
+                        <span class="text-nowrap text-xs text-muted">Pass rate</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="progress" style="width:70%; margin-top: 5px;">
+                            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="83" aria-valuemin="0"
+                                aria-valuemax="100" style="width:79.53%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="height: 45%; top: 10%;">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col"><span class="h6 font-semibold text-muted text-sm d-block mb-2">Failed</span>
+                            <span class="h3 font-bold mb-0">27</span></div>
+                        <div class="col-auto">
+                            <div class="icon icon-shape bg-warning text-white text-lg rounded-circle">F</div>
+                        </div>
+                    </div>
+                    <div class="mt-2 mb-0 text-sm">
+                        <span class="badge badge-pill bg-soft-warning text-warning me-2">15.79%</span>
+                        <span class="text-nowrap text-xs text-muted">Failure rate</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="progress" style="width:70%; margin-top: 5px;">
+                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="83" aria-valuemin="0"
+                                aria-valuemax="100" style="width:15.79%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="width: 20%">
+            <div class="card" style="height: 45%;">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col"><span class="h6 font-semibold text-muted text-sm d-block mb-2">Errors</span>
+                            <span class="h3 font-bold mb-0">8</span></div>
+                        <div class="col-auto">
+                            <div class="icon icon-shape bg-danger text-white text-lg rounded-circle">E</div>
+                        </div>
+                    </div>
+                    <div class="mt-2 mb-0 text-sm">
+                        <span class="badge badge-pill bg-soft-danger text-danger me-2">4.68%</span>
+                        <span class="text-nowrap text-xs text-muted">Error rate</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="progress" style="width:70%; margin-top: 5px;">
+                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="83" aria-valuemin="0"
+                                aria-valuemax="100" style="width:4.68%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="height: 45%; top: 10%;">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <span class="h6 font-semibold text-muted text-sm d-block mb-2">Skipped</span>
+                            <span class="h3 font-bold mb-0">0</span>
+                        </div>
+                        <div class="col-auto">
+                            <div class="icon icon-shape bg-secondary text-white text-lg rounded-circle">S</div>
+                        </div>
+                    </div>
+                    <div class="mt-2 mb-0 text-sm">
+                        <span class="badge badge-pill bg-soft-secondary text-secondary me-2">0.00%</span>
+                        <span class="text-nowrap text-xs text-muted">Skip rate</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="progress" style="width:70%; margin-top: 5px;">
+                            <div class="progress-bar bg-secondary" role="progressbar" aria-valuenow="83" aria-valuemin="0"
+                                aria-valuemax="100" style="width:0.00%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<div id="resultContainer" class="card">
+    <div class="card-header border-bottom">
+        <span style="float: left;">
+            <h5 class="mb-0">Result</h5>
+        </span>
+        <span style="float: right;">
+            <a href='javascript:showCase(0, 1)' class="btn btn-dark btn-sm">Summary</a>
+            <a href='javascript:showCase(1, 1)' class="btn btn-success btn-sm">Pass</a>
+            <a href='javascript:showCase(2, 1)' class="btn btn-warning btn-sm">Failed</a>
+            <a href='javascript:showCase(3, 1)' class="btn btn-danger btn-sm">Error</a>
+            <a href='javascript:showCase(4, 1)' class="btn btn-secondary btn-sm">Skip</a>
+            <a href='javascript:showCase(5, 1)' class="btn btn-info btn-sm">All</a>
+        </span>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-hover table-nowrap">
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">Test Group/Test Case</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Duration</th>
+                    <th scope="col">Count(times)</th>
+                    <th scope="col">Pass(times)</th>
+                    <th scope="col">Fail(times)</th>
+                    <th scope="col">Error(times)</th>
+                    <th scope="col">View</th>
+                    <th scope="col">Screenshots</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+<tr class='failClass'>
+    <td>TestCase.文稿</td>
+    <td></td>
+    <td></td>
+    <td>16</td>
+    <td>13</td>
+    <td>3</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1.1',16)">Detail</a></td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr id='pt1.1.1' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_01</div>
+    </td>
+    <td style="color: #495057">
+        <div>文稿-分类管理跳转</div>
+    </td>
+    <td style="color: #495057">
+        <div>2.94 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.1.2' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_02</div>
+    </td>
+    <td style="color: #495057">
+        <div>文稿-分类管理页面验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>14.41 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.1.3' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_03</div>
+    </td>
+    <td style="color: #495057">
+        <div>文稿页面分类按钮、筛选框、搜索框验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>33.59 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.1.4' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_04</div>
+    </td>
+    <td style="color: #495057">
+        <div>搜索功能验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>14.02 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.1.5' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_05</div>
+    </td>
+    <td style="color: #495057">
+        <div>选中按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>2.43 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.1.6' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_06</div>
+    </td>
+    <td style="color: #495057">
+        <div>翻页按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>5.33 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.1.7' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_07</div>
+    </td>
+    <td style="color: #495057">
+        <div>跳至输入框验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>2.17 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.1.8' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_08</div>
+    </td>
+    <td style="color: #495057">
+        <div>每页条数按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>2.19 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.1.9' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_09</div>
+    </td>
+    <td style="color: #495057">
+        <div>新增通稿-返回按钮和取消按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>23.21 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.1.10' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_10</div>
+    </td>
+    <td style="color: #495057">
+        <div>新增通稿-标题和正文输入框验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>0.3 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.1.11' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_11</div>
+    </td>
+    <td style="color: #495057">
+        <div>新增通稿-左侧按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>48.02 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='ft1.1.12' class='none'>
+    <td class='failCase'>
+        <div class='testcase'>test_12</div>
+    </td>
+    <td style="color: #495057">
+        <div>新增通稿-右侧按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>22.47 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_ft1.1.12')">fail</a>
+        <div id='div_ft1.1.12' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_12</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_ft1.1.12')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>ft1.1.12: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 369, in test_12
+    self.assertNotEqual(keyword2, keyword1, '关键词匹配按钮失效')
+AssertionError: '暂无内容' == '暂无内容' : 关键词匹配按钮失效
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='ft1.1.13' class='none'>
+    <td class='failCase'>
+        <div class='testcase'>test_13</div>
+    </td>
+    <td style="color: #495057">
+        <div>新增页面底部按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>17.71 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_ft1.1.13')">fail</a>
+        <div id='div_ft1.1.13' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_13</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_ft1.1.13')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>ft1.1.13: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 389, in test_13
+    self.assertEqual(length, 0, '预览功能失效')
+AssertionError: 1 != 0 : 预览功能失效
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='ft1.1.14' class='none'>
+    <td class='failCase'>
+        <div class='testcase'>test_14</div>
+    </td>
+    <td style="color: #495057">
+        <div>更多按钮</div>
+    </td>
+    <td style="color: #495057">
+        <div>44.09 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_ft1.1.14')">fail</a>
+        <div id='div_ft1.1.14' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_14</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_ft1.1.14')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>ft1.1.14: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 462, in test_14
+    self.assertNotEqual('Magic Service Error', text3, '预览链接按钮失效')
+AssertionError: 'Magic Service Error' == 'Magic Service Error' : 预览链接按钮失效
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='pt1.1.15' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_15</div>
+    </td>
+    <td style="color: #495057">
+        <div>文稿底部按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>57.21 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.1.16' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_16</div>
+    </td>
+    <td style="color: #495057">
+        <div>文稿底部按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>39.07 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr class='failClass'>
+    <td>TestCase.图集</td>
+    <td></td>
+    <td></td>
+    <td>16</td>
+    <td>13</td>
+    <td>3</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1.2',16)">Detail</a></td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr id='pt1.2.1' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_01</div>
+    </td>
+    <td style="color: #495057">
+        <div>图集-分类管理跳转</div>
+    </td>
+    <td style="color: #495057">
+        <div>3.36 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.2.2' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_02</div>
+    </td>
+    <td style="color: #495057">
+        <div>图集-分类管理页面验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>17.21 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.2.3' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_03</div>
+    </td>
+    <td style="color: #495057">
+        <div>图集页面分类按钮、筛选框、搜索框验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>27.57 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.2.4' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_04</div>
+    </td>
+    <td style="color: #495057">
+        <div>搜索功能验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>11.32 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.2.5' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_05</div>
+    </td>
+    <td style="color: #495057">
+        <div>选中按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>2.43 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.2.6' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_06</div>
+    </td>
+    <td style="color: #495057">
+        <div>翻页按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>5.32 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.2.7' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_07</div>
+    </td>
+    <td style="color: #495057">
+        <div>跳至输入框验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>2.15 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.2.8' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_08</div>
+    </td>
+    <td style="color: #495057">
+        <div>每页条数按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>2.16 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.2.9' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_09</div>
+    </td>
+    <td style="color: #495057">
+        <div>新增图集-返回按钮和取消按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>14.86 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.2.10' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_10</div>
+    </td>
+    <td style="color: #495057">
+        <div>新增图集-标题和图片</div>
+    </td>
+    <td style="color: #495057">
+        <div>6.69 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.2.11' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_11</div>
+    </td>
+    <td style="color: #495057">
+        <div>新增图集-左侧按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>47.01 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='ft1.2.12' class='none'>
+    <td class='failCase'>
+        <div class='testcase'>test_12</div>
+    </td>
+    <td style="color: #495057">
+        <div>新增图集-右侧按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>10.06 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_ft1.2.12')">fail</a>
+        <div id='div_ft1.2.12' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_12</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_ft1.2.12')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>ft1.2.12: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 878, in test_12
+    self.assertNotEqual(keyword1, keyword2, '匹配关键词按钮失效')
+AssertionError: '暂无内容' == '暂无内容' : 匹配关键词按钮失效
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='ft1.2.13' class='none'>
+    <td class='failCase'>
+        <div class='testcase'>test_13</div>
+    </td>
+    <td style="color: #495057">
+        <div>新增图集内部功能验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>24.33 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_ft1.2.13')">fail</a>
+        <div id='div_ft1.2.13' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_13</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_ft1.2.13')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>ft1.2.13: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 905, in test_13
+    self.assertEqual(length1, 0, '图片的编辑按钮失效')
+AssertionError: 1 != 0 : 图片的编辑按钮失效
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='ft1.2.14' class='none'>
+    <td class='failCase'>
+        <div class='testcase'>test_14</div>
+    </td>
+    <td style="color: #495057">
+        <div>更多按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>42.73 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_ft1.2.14')">fail</a>
+        <div id='div_ft1.2.14' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_14</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_ft1.2.14')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>ft1.2.14: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 976, in test_14
+    self.assertNotEqual('Magic Service Error', text3, '预览链接按钮失效')
+AssertionError: 'Magic Service Error' == 'Magic Service Error' : 预览链接按钮失效
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='pt1.2.15' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_15</div>
+    </td>
+    <td style="color: #495057">
+        <div>图集底部按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>61.65 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.2.16' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_16</div>
+    </td>
+    <td style="color: #495057">
+        <div>图集底部按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>45.92 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr class='failClass'>
+    <td>TestCase.外链</td>
+    <td></td>
+    <td></td>
+    <td>16</td>
+    <td>14</td>
+    <td>2</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1.3',16)">Detail</a></td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr id='pt1.3.1' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_01</div>
+    </td>
+    <td style="color: #495057">
+        <div>外链-分类管理跳转</div>
+    </td>
+    <td style="color: #495057">
+        <div>3.19 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.3.2' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_02</div>
+    </td>
+    <td style="color: #495057">
+        <div>外链-分类管理页面验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>17.24 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.3.3' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_03</div>
+    </td>
+    <td style="color: #495057">
+        <div>外链页面分类按钮、筛选框、搜索框验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>28.94 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.3.4' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_04</div>
+    </td>
+    <td style="color: #495057">
+        <div>搜索功能验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>14.11 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.3.5' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_05</div>
+    </td>
+    <td style="color: #495057">
+        <div>选中按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>2.41 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.3.6' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_06</div>
+    </td>
+    <td style="color: #495057">
+        <div>翻页按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>6.36 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.3.7' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_07</div>
+    </td>
+    <td style="color: #495057">
+        <div>跳至输入框验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>2.27 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.3.8' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_08</div>
+    </td>
+    <td style="color: #495057">
+        <div>每页条数按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>2.18 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.3.9' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_09</div>
+    </td>
+    <td style="color: #495057">
+        <div>新增外链-返回按钮和取消按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>27.92 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.3.10' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_10</div>
+    </td>
+    <td style="color: #495057">
+        <div>新增外链-标题和链接</div>
+    </td>
+    <td style="color: #495057">
+        <div>3.55 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.3.11' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_11</div>
+    </td>
+    <td style="color: #495057">
+        <div>新增外链-左侧按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>47.86 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='ft1.3.12' class='none'>
+    <td class='failCase'>
+        <div class='testcase'>test_12</div>
+    </td>
+    <td style="color: #495057">
+        <div>新增外链-右侧按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>14.95 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_ft1.3.12')">fail</a>
+        <div id='div_ft1.3.12' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_12</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_ft1.3.12')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>ft1.3.12: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 1413, in test_12
+    self.assertNotEqual(keyword1, keyword2, '匹配关键词按钮失效')
+AssertionError: '暂无内容' == '暂无内容' : 匹配关键词按钮失效
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='pt1.3.13' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_13</div>
+    </td>
+    <td style="color: #495057">
+        <div>新增外链底部按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>12.21 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='ft1.3.14' class='none'>
+    <td class='failCase'>
+        <div class='testcase'>test_14</div>
+    </td>
+    <td style="color: #495057">
+        <div>更多按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>46.16 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_ft1.3.14')">fail</a>
+        <div id='div_ft1.3.14' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_14</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_ft1.3.14')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>ft1.3.14: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 1511, in test_14
+    self.assertNotEqual('不支持的稿件类型', text3, '预览链接按钮失效')
+AssertionError: '不支持的稿件类型' == '不支持的稿件类型' : 预览链接按钮失效
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='pt1.3.15' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_15</div>
+    </td>
+    <td style="color: #495057">
+        <div>外链底部按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>56.35 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.3.16' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_16</div>
+    </td>
+    <td style="color: #495057">
+        <div>外链底部按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>42.11 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr class='failClass'>
+    <td>TestCase.专题</td>
+    <td></td>
+    <td></td>
+    <td>14</td>
+    <td>12</td>
+    <td>2</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1.4',14)">Detail</a></td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr id='pt1.4.1' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_01</div>
+    </td>
+    <td style="color: #495057">
+        <div>专题-分类管理跳转</div>
+    </td>
+    <td style="color: #495057">
+        <div>3.29 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.4.2' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_02</div>
+    </td>
+    <td style="color: #495057">
+        <div>专题-分类管理页面验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>17.12 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.4.3' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_03</div>
+    </td>
+    <td style="color: #495057">
+        <div>专题页面分类按钮、筛选框、搜索框验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>24.55 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.4.4' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_04</div>
+    </td>
+    <td style="color: #495057">
+        <div>搜索功能验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>12.0 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.4.5' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_05</div>
+    </td>
+    <td style="color: #495057">
+        <div>选中按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>2.4 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.4.6' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_06</div>
+    </td>
+    <td style="color: #495057">
+        <div>翻页按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>5.31 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.4.7' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_07</div>
+    </td>
+    <td style="color: #495057">
+        <div>跳至输入框验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>2.16 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.4.8' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_08</div>
+    </td>
+    <td style="color: #495057">
+        <div>每页条数按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>2.18 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.4.9' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_09</div>
+    </td>
+    <td style="color: #495057">
+        <div>新增专题-返回按钮和取消按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>14.77 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.4.10' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_10</div>
+    </td>
+    <td style="color: #495057">
+        <div>新增专题-内部功能验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>33.96 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='ft1.4.11' class='none'>
+    <td class='failCase'>
+        <div class='testcase'>test_11</div>
+    </td>
+    <td style="color: #495057">
+        <div>新增专题-左侧按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>57.38 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_ft1.4.11')">fail</a>
+        <div id='div_ft1.4.11' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_11</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_ft1.4.11')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>ft1.4.11: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 1952, in test_11
+    self.assertNotEqual(length, 1, '新增专题保存后无法正常跳转')
+AssertionError: 1 == 1 : 新增专题保存后无法正常跳转
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='ft1.4.12' class='none'>
+    <td class='failCase'>
+        <div class='testcase'>test_12</div>
+    </td>
+    <td style="color: #495057">
+        <div>更多按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>38.41 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_ft1.4.12')">fail</a>
+        <div id='div_ft1.4.12' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_12</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_ft1.4.12')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>ft1.4.12: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 2013, in test_12
+    self.assertNotEqual(length, 1, '编辑专题保存后无法自动跳转')
+AssertionError: 1 == 1 : 编辑专题保存后无法自动跳转
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='pt1.4.13' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_13</div>
+    </td>
+    <td style="color: #495057">
+        <div>专题底部按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>59.01 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.4.14' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_14</div>
+    </td>
+    <td style="color: #495057">
+        <div>专题底部按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>42.99 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr class='failClass'>
+    <td>TestCase.视频</td>
+    <td></td>
+    <td></td>
+    <td>19</td>
+    <td>13</td>
+    <td>6</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1.5',19)">Detail</a></td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr id='pt1.5.1' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_01</div>
+    </td>
+    <td style="color: #495057">
+        <div>视频-分类管理跳转</div>
+    </td>
+    <td style="color: #495057">
+        <div>3.17 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.5.2' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_02</div>
+    </td>
+    <td style="color: #495057">
+        <div>视频-分类管理页面验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>19.08 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.5.3' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_03</div>
+    </td>
+    <td style="color: #495057">
+        <div>视频页面分类按钮、筛选框、搜索框验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>29.4 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.5.4' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_04</div>
+    </td>
+    <td style="color: #495057">
+        <div>搜索功能验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>11.1 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.5.5' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_05</div>
+    </td>
+    <td style="color: #495057">
+        <div>选中按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>2.64 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.5.6' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_06</div>
+    </td>
+    <td style="color: #495057">
+        <div>翻页按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>6.3 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.5.7' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_07</div>
+    </td>
+    <td style="color: #495057">
+        <div>跳至输入框验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>2.15 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.5.8' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_08</div>
+    </td>
+    <td style="color: #495057">
+        <div>每页条数按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>2.17 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.5.9' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_09</div>
+    </td>
+    <td style="color: #495057">
+        <div>新增视频-返回按钮和取消按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>29.86 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.5.10' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_10</div>
+    </td>
+    <td style="color: #495057">
+        <div>新增视频-标题和链接</div>
+    </td>
+    <td style="color: #495057">
+        <div>4.8 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.5.11' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_11</div>
+    </td>
+    <td style="color: #495057">
+        <div>新增视频-左侧按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>49.61 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='ft1.5.12' class='none'>
+    <td class='failCase'>
+        <div class='testcase'>test_12</div>
+    </td>
+    <td style="color: #495057">
+        <div>新增视频-右侧按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>15.13 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_ft1.5.12')">fail</a>
+        <div id='div_ft1.5.12' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_12</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_ft1.5.12')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>ft1.5.12: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 2453, in test_12
+    self.assertNotEqual(keyword1, keyword2, '匹配关键词按钮失效')
+AssertionError: '暂无内容' == '暂无内容' : 匹配关键词按钮失效
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='ft1.5.13' class='none'>
+    <td class='failCase'>
+        <div class='testcase'>test_13</div>
+    </td>
+    <td style="color: #495057">
+        <div>新增视频底部按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>13.24 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_ft1.5.13')">fail</a>
+        <div id='div_ft1.5.13' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_13</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_ft1.5.13')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>ft1.5.13: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 2467, in test_13
+    self.assertEqual(length2, 0, '预览功能失效')
+AssertionError: 1 != 0 : 预览功能失效
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='ft1.5.14' class='none'>
+    <td class='failCase'>
+        <div class='testcase'>test_14</div>
+    </td>
+    <td style="color: #495057">
+        <div>更多按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>37.88 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_ft1.5.14')">fail</a>
+        <div id='div_ft1.5.14' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_14</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_ft1.5.14')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>ft1.5.14: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 2531, in test_14
+    self.assertNotEqual('', text3, '预览链接按钮失效')
+AssertionError: '' == '' : 预览链接按钮失效
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='ft1.5.15' class='none'>
+    <td class='failCase'>
+        <div class='testcase'>test_15</div>
+    </td>
+    <td style="color: #495057">
+        <div>更多-下载按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>7.44 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_ft1.5.15')">fail</a>
+        <div id='div_ft1.5.15' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_15</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_ft1.5.15')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>ft1.5.15: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 2545, in test_15
+    self.assertNotEqual(file1, file2, '下载失败')
+AssertionError: 13 == 13 : 下载失败
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='ft1.5.16' class='none'>
+    <td class='failCase'>
+        <div class='testcase'>test_16</div>
+    </td>
+    <td style="color: #495057">
+        <div>更多-预览按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>3.34 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_ft1.5.16')">fail</a>
+        <div id='div_ft1.5.16' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_16</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_ft1.5.16')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>ft1.5.16: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 2555, in test_16
+    self.assertNotEqual(1, length, '预览失败')
+AssertionError: 1 == 1 : 预览失败
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='pt1.5.17' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_17</div>
+    </td>
+    <td style="color: #495057">
+        <div>批量上传验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>15.88 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='ft1.5.18' class='none'>
+    <td class='failCase'>
+        <div class='testcase'>test_18</div>
+    </td>
+    <td style="color: #495057">
+        <div>视频底部按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>64.83 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_ft1.5.18')">fail</a>
+        <div id='div_ft1.5.18' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_18</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_ft1.5.18')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>ft1.5.18: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 2638, in test_18
+    self.assertEqual(length, 1, '发布的栏目未出现')
+AssertionError: 0 != 1 : 发布的栏目未出现
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='pt1.5.19' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_19</div>
+    </td>
+    <td style="color: #495057">
+        <div>视频底部按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>52.1 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr class='failClass'>
+    <td>TestCase.音频</td>
+    <td></td>
+    <td></td>
+    <td>19</td>
+    <td>16</td>
+    <td>3</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1.6',19)">Detail</a></td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr id='pt1.6.1' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_01</div>
+    </td>
+    <td style="color: #495057">
+        <div>音频-分类管理跳转</div>
+    </td>
+    <td style="color: #495057">
+        <div>3.24 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.6.2' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_02</div>
+    </td>
+    <td style="color: #495057">
+        <div>音频-分类管理页面验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>18.85 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.6.3' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_03</div>
+    </td>
+    <td style="color: #495057">
+        <div>音频页面分类按钮、筛选框、搜索框验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>27.35 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.6.4' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_04</div>
+    </td>
+    <td style="color: #495057">
+        <div>搜索功能验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>12.37 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.6.5' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_05</div>
+    </td>
+    <td style="color: #495057">
+        <div>选中按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>2.42 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.6.6' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_06</div>
+    </td>
+    <td style="color: #495057">
+        <div>翻页按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>2.19 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.6.7' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_07</div>
+    </td>
+    <td style="color: #495057">
+        <div>跳至输入框验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>2.16 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.6.8' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_08</div>
+    </td>
+    <td style="color: #495057">
+        <div>每页条数按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>2.17 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.6.9' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_09</div>
+    </td>
+    <td style="color: #495057">
+        <div>新增音频-返回按钮和取消按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>17.04 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.6.10' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_10</div>
+    </td>
+    <td style="color: #495057">
+        <div>新增音频-标题和图片</div>
+    </td>
+    <td style="color: #495057">
+        <div>5.61 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.6.11' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_11</div>
+    </td>
+    <td style="color: #495057">
+        <div>新增音频-左侧按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>46.37 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='ft1.6.12' class='none'>
+    <td class='failCase'>
+        <div class='testcase'>test_12</div>
+    </td>
+    <td style="color: #495057">
+        <div>新增音频-右侧按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>15.03 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_ft1.6.12')">fail</a>
+        <div id='div_ft1.6.12' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_12</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_ft1.6.12')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>ft1.6.12: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 3001, in test_12
+    self.assertNotEqual(keyword1, keyword2, '匹配关键词按钮失效')
+AssertionError: '暂无内容' == '暂无内容' : 匹配关键词按钮失效
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='pt1.6.13' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_13</div>
+    </td>
+    <td style="color: #495057">
+        <div>新增音频内部功能验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>11.86 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='ft1.6.14' class='none'>
+    <td class='failCase'>
+        <div class='testcase'>test_14</div>
+    </td>
+    <td style="color: #495057">
+        <div>更多按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>38.63 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_ft1.6.14')">fail</a>
+        <div id='div_ft1.6.14' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_14</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_ft1.6.14')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>ft1.6.14: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 3080, in test_14
+    self.assertNotEqual(text3, '', '预览链接按钮失效')
+AssertionError: '' == '' : 预览链接按钮失效
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='pt1.6.15' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_15</div>
+    </td>
+    <td style="color: #495057">
+        <div>更多-下载按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>10.17 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.6.16' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_16</div>
+    </td>
+    <td style="color: #495057">
+        <div>更多-预览按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>11.27 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='ft1.6.17' class='none'>
+    <td class='failCase'>
+        <div class='testcase'>test_17</div>
+    </td>
+    <td style="color: #495057">
+        <div>批量上传验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>12.61 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_ft1.6.17')">fail</a>
+        <div id='div_ft1.6.17' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_17</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_ft1.6.17')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>ft1.6.17: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 3125, in test_17
+    self.assertNotEqual(text1, text2, '批量上传功能异常')
+AssertionError: '共31条记录' == '共31条记录' : 批量上传功能异常
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='pt1.6.18' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_18</div>
+    </td>
+    <td style="color: #495057">
+        <div>音频底部按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>60.21 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.6.19' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_19</div>
+    </td>
+    <td style="color: #495057">
+        <div>音频底部按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>52.64 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr class='failClass'>
+    <td>TestCase.资源库</td>
+    <td></td>
+    <td></td>
+    <td>12</td>
+    <td>11</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1.7',12)">Detail</a></td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr id='pt1.7.1' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_01</div>
+    </td>
+    <td style="color: #495057">
+        <div>新增文件夹按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>8.35 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.7.2' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_02</div>
+    </td>
+    <td style="color: #495057">
+        <div>文件上传按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>8.47 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.7.3' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_03</div>
+    </td>
+    <td style="color: #495057">
+        <div>筛选框、搜索框验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>16.55 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.7.4' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_04</div>
+    </td>
+    <td style="color: #495057">
+        <div>排序、展示按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>13.35 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.7.5' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_05</div>
+    </td>
+    <td style="color: #495057">
+        <div>翻页按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>2.59 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.7.6' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_06</div>
+    </td>
+    <td style="color: #495057">
+        <div>跳至输入框验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>2.2 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.7.7' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_07</div>
+    </td>
+    <td style="color: #495057">
+        <div>每页条数按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>5.67 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.7.8' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_08</div>
+    </td>
+    <td style="color: #495057">
+        <div>我的资源-底部按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>16.75 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.7.9' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_09</div>
+    </td>
+    <td style="color: #495057">
+        <div>文件按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>6.24 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.7.10' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_10</div>
+    </td>
+    <td style="color: #495057">
+        <div>回收站按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>10.89 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.7.11' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_11</div>
+    </td>
+    <td style="color: #495057">
+        <div>文件夹面包屑导航验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>8.34 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='ft1.7.12' class='none'>
+    <td class='failCase'>
+        <div class='testcase'>test_12</div>
+    </td>
+    <td style="color: #495057">
+        <div>文件和文件夹同时删除验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>10.8 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_ft1.7.12')">fail</a>
+        <div id='div_ft1.7.12' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_12</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_ft1.7.12')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>ft1.7.12: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 3514, in test_12
+    self.assertNotEqual(text1, text2, '文件和文件夹同时选中时能删除')
+AssertionError: '共104条记录' == '共104条记录' : 文件和文件夹同时选中时能删除
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr class='failClass'>
+    <td>TestCase.发布库</td>
+    <td></td>
+    <td></td>
+    <td>13</td>
+    <td>11</td>
+    <td>2</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1.8',13)">Detail</a></td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr id='pt1.8.1' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_01</div>
+    </td>
+    <td style="color: #495057">
+        <div>左侧分类验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>8.28 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.8.2' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_02</div>
+    </td>
+    <td style="color: #495057">
+        <div>筛选框验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>12.58 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.8.3' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_03</div>
+    </td>
+    <td style="color: #495057">
+        <div>验证搜索框</div>
+    </td>
+    <td style="color: #495057">
+        <div>13.26 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.8.4' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_04</div>
+    </td>
+    <td style="color: #495057">
+        <div>排序按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>4.93 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.8.5' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_05</div>
+    </td>
+    <td style="color: #495057">
+        <div>翻页按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>4.28 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.8.6' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_06</div>
+    </td>
+    <td style="color: #495057">
+        <div>跳至输入框验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>2.18 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.8.7' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_07</div>
+    </td>
+    <td style="color: #495057">
+        <div>每页条数按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>5.98 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.8.8' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_08</div>
+    </td>
+    <td style="color: #495057">
+        <div>全选按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>5.65 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='ft1.8.9' class='none'>
+    <td class='failCase'>
+        <div class='testcase'>test_09</div>
+    </td>
+    <td style="color: #495057">
+        <div>底部按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>29.1 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_ft1.8.9')">fail</a>
+        <div id='div_ft1.8.9' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_09</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_ft1.8.9')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>ft1.8.9: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 3728, in test_09
+    self.assertNotEqual(length1, 1, '复制后无反应')
+AssertionError: 1 == 1 : 复制后无反应
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='ft1.8.10' class='none'>
+    <td class='failCase'>
+        <div class='testcase'>test_10</div>
+    </td>
+    <td style="color: #495057">
+        <div>发布库稿件点击验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>7.18 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_ft1.8.10')">fail</a>
+        <div id='div_ft1.8.10' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_10</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_ft1.8.10')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>ft1.8.10: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 3740, in test_10
+    self.assertNotEqual(text, '融合媒体运营平台', '点击无法跳转到发布的平台')
+AssertionError: '融合媒体运营平台' == '融合媒体运营平台' : 点击无法跳转到发布的平台
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='pt1.8.11' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_11</div>
+    </td>
+    <td style="color: #495057">
+        <div>更多按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>45.23 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.8.12' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_12</div>
+    </td>
+    <td style="color: #495057">
+        <div>发布库-栏目管理跳转</div>
+    </td>
+    <td style="color: #495057">
+        <div>3.26 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.8.13' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_13</div>
+    </td>
+    <td style="color: #495057">
+        <div>发布库-栏目管理页面功能验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>25.49 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr class='failClass'>
+    <td>TestCase.报料</td>
+    <td></td>
+    <td></td>
+    <td>18</td>
+    <td>17</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1.9',18)">Detail</a></td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr id='pt1.9.1' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_01</div>
+    </td>
+    <td style="color: #495057">
+        <div>报料-分类管理跳转</div>
+    </td>
+    <td style="color: #495057">
+        <div>3.93 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.9.2' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_02</div>
+    </td>
+    <td style="color: #495057">
+        <div>报料-分类管理功能验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>19.0 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.9.3' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_03</div>
+    </td>
+    <td style="color: #495057">
+        <div>报料设置页面验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>11.15 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.9.4' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_04</div>
+    </td>
+    <td style="color: #495057">
+        <div>话题设置页面验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>28.02 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.9.5' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_05</div>
+    </td>
+    <td style="color: #495057">
+        <div>文稿页面分类按钮、筛选框、搜索框验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>33.46 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.9.6' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_06</div>
+    </td>
+    <td style="color: #495057">
+        <div>搜索功能验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>5.49 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.9.7' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_07</div>
+    </td>
+    <td style="color: #495057">
+        <div>选中按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>2.43 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.9.8' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_08</div>
+    </td>
+    <td style="color: #495057">
+        <div>翻页按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>2.61 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.9.9' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_09</div>
+    </td>
+    <td style="color: #495057">
+        <div>跳至输入框验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>2.65 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.9.10' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_10</div>
+    </td>
+    <td style="color: #495057">
+        <div>每页条数按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>6.04 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.9.11' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_11</div>
+    </td>
+    <td style="color: #495057">
+        <div>新增报料功能验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>12.36 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.9.12' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_12</div>
+    </td>
+    <td style="color: #495057">
+        <div>话题编辑按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>5.29 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='et1.9.13' class='none'>
+    <td class='errorCase'>
+        <div class='testcase'>test_13</div>
+    </td>
+    <td style="color: #495057">
+        <div>回复按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>8.1 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_et1.9.13')">error</a>
+        <div id='div_et1.9.13' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_13</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_et1.9.13')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>et1.9.13: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 4127, in test_13
+    send_key('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[2]/div/div/div/div/div[2]/div/div[3]/div[1]/div[2]/div/div/form/textarea', '回复测试')
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 23, in send_key
+    find(ele).send_keys(data)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webelement.py", line 223, in send_keys
+    self._execute(Command.SEND_KEYS_TO_ELEMENT,
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webelement.py", line 396, in _execute
+    return self._parent.execute(command, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 428, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 243, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=107.0.5304.87)
+Stacktrace:
+0   chromedriver                        0x0000000105eaa2c8 chromedriver + 4752072
+1   chromedriver                        0x0000000105e2a463 chromedriver + 4228195
+2   chromedriver                        0x0000000105a8d98a chromedriver + 440714
+3   chromedriver                        0x0000000105ac43dd chromedriver + 664541
+4   chromedriver                        0x0000000105ac3928 chromedriver + 661800
+5   chromedriver                        0x0000000105aebd02 chromedriver + 826626
+6   chromedriver                        0x0000000105abe685 chromedriver + 640645
+7   chromedriver                        0x0000000105aebe5e chromedriver + 826974
+8   chromedriver                        0x0000000105b04134 chromedriver + 926004
+9   chromedriver                        0x0000000105aebb33 chromedriver + 826163
+10  chromedriver                        0x0000000105abc9fd chromedriver + 633341
+11  chromedriver                        0x0000000105abe051 chromedriver + 639057
+12  chromedriver                        0x0000000105e7730e chromedriver + 4543246
+13  chromedriver                        0x0000000105e7ba88 chromedriver + 4561544
+14  chromedriver                        0x0000000105e836df chromedriver + 4593375
+15  chromedriver                        0x0000000105e7c8fa chromedriver + 4565242
+16  chromedriver                        0x0000000105e522cf chromedriver + 4391631
+17  chromedriver                        0x0000000105e9b5b8 chromedriver + 4691384
+18  chromedriver                        0x0000000105e9b739 chromedriver + 4691769
+19  chromedriver                        0x0000000105eb181e chromedriver + 4782110
+20  libsystem_pthread.dylib             0x00007ff80a1244e1 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff80a11ff6b thread_start + 15
+
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='pt1.9.14' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_14</div>
+    </td>
+    <td style="color: #495057">
+        <div>修改分类按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>2.57 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.9.15' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_15</div>
+    </td>
+    <td style="color: #495057">
+        <div>审核按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>2.11 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.9.16' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_16</div>
+    </td>
+    <td style="color: #495057">
+        <div>采纳按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>14.81 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.9.17' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_17</div>
+    </td>
+    <td style="color: #495057">
+        <div>删除按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>7.98 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.9.18' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_18</div>
+    </td>
+    <td style="color: #495057">
+        <div>底部按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>30.55 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr class='failClass'>
+    <td>TestCase.评论</td>
+    <td></td>
+    <td></td>
+    <td>9</td>
+    <td>7</td>
+    <td>2</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1.10',9)">Detail</a></td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr id='pt1.10.1' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_01</div>
+    </td>
+    <td style="color: #495057">
+        <div>评论设置页面功能验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>13.15 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.10.2' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_02</div>
+    </td>
+    <td style="color: #495057">
+        <div>左侧分类按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>8.37 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.10.3' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_03</div>
+    </td>
+    <td style="color: #495057">
+        <div>筛选框验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>3.59 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.10.4' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_04</div>
+    </td>
+    <td style="color: #495057">
+        <div>搜索框验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>5.86 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.10.5' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_05</div>
+    </td>
+    <td style="color: #495057">
+        <div>翻页按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>2.42 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.10.6' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_06</div>
+    </td>
+    <td style="color: #495057">
+        <div>跳至输入框验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>2.43 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.10.7' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_07</div>
+    </td>
+    <td style="color: #495057">
+        <div>每页条数按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>5.28 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='et1.10.8' class='none'>
+    <td class='errorCase'>
+        <div class='testcase'>test_08</div>
+    </td>
+    <td style="color: #495057">
+        <div>评论点击验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>15.47 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_et1.10.8')">error</a>
+        <div id='div_et1.10.8' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_08</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_et1.10.8')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>et1.10.8: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 4375, in test_08
+    click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[2]/div/div/div[3]/div/div/div/div[3]/div/div/div[10]/i')  # 回复
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 19, in click
+    find(ele).click()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webelement.py", line 88, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webelement.py", line 396, in _execute
+    return self._parent.execute(command, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 428, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 243, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=107.0.5304.87)
+Stacktrace:
+0   chromedriver                        0x000000010169f2c8 chromedriver + 4752072
+1   chromedriver                        0x000000010161f463 chromedriver + 4228195
+2   chromedriver                        0x000000010128298a chromedriver + 440714
+3   chromedriver                        0x00000001012c10b3 chromedriver + 696499
+4   chromedriver                        0x00000001012b3f01 chromedriver + 642817
+5   chromedriver                        0x00000001012e0d02 chromedriver + 826626
+6   chromedriver                        0x00000001012b3685 chromedriver + 640645
+7   chromedriver                        0x00000001012e0e5e chromedriver + 826974
+8   chromedriver                        0x00000001012f9134 chromedriver + 926004
+9   chromedriver                        0x00000001012e0b33 chromedriver + 826163
+10  chromedriver                        0x00000001012b19fd chromedriver + 633341
+11  chromedriver                        0x00000001012b3051 chromedriver + 639057
+12  chromedriver                        0x000000010166c30e chromedriver + 4543246
+13  chromedriver                        0x0000000101670a88 chromedriver + 4561544
+14  chromedriver                        0x00000001016786df chromedriver + 4593375
+15  chromedriver                        0x00000001016718fa chromedriver + 4565242
+16  chromedriver                        0x00000001016472cf chromedriver + 4391631
+17  chromedriver                        0x00000001016905b8 chromedriver + 4691384
+18  chromedriver                        0x0000000101690739 chromedriver + 4691769
+19  chromedriver                        0x00000001016a681e chromedriver + 4782110
+20  libsystem_pthread.dylib             0x00007ff80a1244e1 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff80a11ff6b thread_start + 15
+
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='ft1.10.9' class='none'>
+    <td class='failCase'>
+        <div class='testcase'>test_09</div>
+    </td>
+    <td style="color: #495057">
+        <div>底部按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>7.81 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_ft1.10.9')">fail</a>
+        <div id='div_ft1.10.9' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_09</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_ft1.10.9')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>ft1.10.9: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 4427, in test_09
+    self.assertNotEqual(text1, text2, '审核按钮异常')
+AssertionError: '已审核' == '已审核' : 审核按钮异常
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr class='failClass'>
+    <td>TestCase.积分</td>
+    <td></td>
+    <td></td>
+    <td>7</td>
+    <td>4</td>
+    <td>3</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1.11',7)">Detail</a></td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr id='ft1.11.1' class='none'>
+    <td class='failCase'>
+        <div class='testcase'>test_01</div>
+    </td>
+    <td style="color: #495057">
+        <div>积分管理页面验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>5.02 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_ft1.11.1')">fail</a>
+        <div id='div_ft1.11.1' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_01</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_ft1.11.1')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>ft1.11.1: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 4452, in test_01
+    self.assertNotEqual(length, 1, '积分管理页面一直加载中')
+AssertionError: 1 == 1 : 积分管理页面一直加载中
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='pt1.11.2' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_02</div>
+    </td>
+    <td style="color: #495057">
+        <div>任务管理-筛选框验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>10.88 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.11.3' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_03</div>
+    </td>
+    <td style="color: #495057">
+        <div>任务管理-按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>13.15 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.11.4' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_04</div>
+    </td>
+    <td style="color: #495057">
+        <div>积分日志-筛选框验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>10.69 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.11.5' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_05</div>
+    </td>
+    <td style="color: #495057">
+        <div>积分日志-导出按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>3.35 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='ft1.11.6' class='none'>
+    <td class='failCase'>
+        <div class='testcase'>test_06</div>
+    </td>
+    <td style="color: #495057">
+        <div>积分设置验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>7.98 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_ft1.11.6')">fail</a>
+        <div id='div_ft1.11.6' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_06</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_ft1.11.6')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>ft1.11.6: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 4544, in test_06
+    self.assertNotEqual(text1, text2, '积分设置编辑功能异常')
+AssertionError: '1' == '1' : 积分设置编辑功能异常
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='ft1.11.7' class='none'>
+    <td class='failCase'>
+        <div class='testcase'>test_07</div>
+    </td>
+    <td style="color: #495057">
+        <div>积分统计验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>9.35 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_ft1.11.7')">fail</a>
+        <div id='div_ft1.11.7' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_07</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_ft1.11.7')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>ft1.11.7: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 4554, in test_07
+    self.assertNotEqual(length, 1, '积分统计页面一直在加载中')
+AssertionError: 1 == 1 : 积分统计页面一直在加载中
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr class='failClass'>
+    <td>TestCase.会员</td>
+    <td></td>
+    <td></td>
+    <td>12</td>
+    <td>5</td>
+    <td>7</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1.12',12)">Detail</a></td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr id='pt1.12.1' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_01</div>
+    </td>
+    <td style="color: #495057">
+        <div>会员列表-筛选框验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>12.84 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='ft1.12.2' class='none'>
+    <td class='failCase'>
+        <div class='testcase'>test_02</div>
+    </td>
+    <td style="color: #495057">
+        <div>验证搜索框</div>
+    </td>
+    <td style="color: #495057">
+        <div>4.33 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_ft1.12.2')">fail</a>
+        <div id='div_ft1.12.2' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_02</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_ft1.12.2')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>ft1.12.2: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 4619, in test_02
+    self.assertEqual(flag, 1, '搜索功能异常，未返回正确的搜索结果')
+AssertionError: 0 != 1 : 搜索功能异常，未返回正确的搜索结果
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='pt1.12.3' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_03</div>
+    </td>
+    <td style="color: #495057">
+        <div>验证会员点击查看详情</div>
+    </td>
+    <td style="color: #495057">
+        <div>1.08 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.12.4' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_04</div>
+    </td>
+    <td style="color: #495057">
+        <div>分组按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>4.58 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.12.5' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_05</div>
+    </td>
+    <td style="color: #495057">
+        <div>新增会员验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>4.5 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='pt1.12.6' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_06</div>
+    </td>
+    <td style="color: #495057">
+        <div>更多按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>5.74 s</div>
+    </td>
+    <td colspan='5' align='center'>pass</td>
+    <td></td>
+</tr>
+
+<tr id='et1.12.7' class='none'>
+    <td class='errorCase'>
+        <div class='testcase'>test_07</div>
+    </td>
+    <td style="color: #495057">
+        <div>底部按钮验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>1.13 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_et1.12.7')">error</a>
+        <div id='div_et1.12.7' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_07</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_et1.12.7')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>et1.12.7: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 4676, in test_07
+    click('/html/body/div[1]/div[2]/div[3]/ui-view/div/main/div/div[1]/div[2]/div[2]/div[1]/div[1]/label/input')
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 19, in click
+    find(ele).click()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webelement.py", line 88, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webelement.py", line 396, in _execute
+    return self._parent.execute(command, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 428, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 243, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element &lt;input type="checkbox" value="option1" title="268" ng-checked="vm.itemCheck(item,$event)" ng-click="vm.toggle(item,$event)"&gt; is not clickable at point (44, 272). Other element would receive the click: &lt;div modal-render="true" tabindex="-1" role="dialog" class="modal fade ng-isolate-scope creatModalStyle in" uib-modal-animation-class="fade" modal-in-class="in" ng-style="{'z-index': 1050 + index*10, display: 'block'}" uib-modal-window="modal-window" window-class="creatModalStyle" index="0" animate="animate" modal-animation="true" style="z-index: 1050; display: block;"&gt;...&lt;/div&gt;
+  (Session info: chrome=107.0.5304.87)
+Stacktrace:
+0   chromedriver                        0x000000010e9112c8 chromedriver + 4752072
+1   chromedriver                        0x000000010e891463 chromedriver + 4228195
+2   chromedriver                        0x000000010e4f4b18 chromedriver + 441112
+3   chromedriver                        0x000000010e539c9b chromedriver + 724123
+4   chromedriver                        0x000000010e53749d chromedriver + 713885
+5   chromedriver                        0x000000010e5349e4 chromedriver + 702948
+6   chromedriver                        0x000000010e53373d chromedriver + 698173
+7   chromedriver                        0x000000010e525f01 chromedriver + 642817
+8   chromedriver                        0x000000010e552d02 chromedriver + 826626
+9   chromedriver                        0x000000010e525685 chromedriver + 640645
+10  chromedriver                        0x000000010e552e5e chromedriver + 826974
+11  chromedriver                        0x000000010e56b134 chromedriver + 926004
+12  chromedriver                        0x000000010e552b33 chromedriver + 826163
+13  chromedriver                        0x000000010e5239fd chromedriver + 633341
+14  chromedriver                        0x000000010e525051 chromedriver + 639057
+15  chromedriver                        0x000000010e8de30e chromedriver + 4543246
+16  chromedriver                        0x000000010e8e2a88 chromedriver + 4561544
+17  chromedriver                        0x000000010e8ea6df chromedriver + 4593375
+18  chromedriver                        0x000000010e8e38fa chromedriver + 4565242
+19  chromedriver                        0x000000010e8b92cf chromedriver + 4391631
+20  chromedriver                        0x000000010e9025b8 chromedriver + 4691384
+21  chromedriver                        0x000000010e902739 chromedriver + 4691769
+22  chromedriver                        0x000000010e91881e chromedriver + 4782110
+23  libsystem_pthread.dylib             0x00007ff80a1244e1 _pthread_start + 125
+24  libsystem_pthread.dylib             0x00007ff80a11ff6b thread_start + 15
+
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='et1.12.8' class='none'>
+    <td class='errorCase'>
+        <div class='testcase'>test_08</div>
+    </td>
+    <td style="color: #495057">
+        <div>分组管理验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>5.34 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_et1.12.8')">error</a>
+        <div id='div_et1.12.8' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_08</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_et1.12.8')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>et1.12.8: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 4723, in test_08
+    click('/html/body/div[1]/div[2]/div[1]/div[1]/div[1]/div/div[3]/div/a[2]')  # 分组管理
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 19, in click
+    find(ele).click()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webelement.py", line 88, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webelement.py", line 396, in _execute
+    return self._parent.execute(command, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 428, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 243, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=107.0.5304.87)
+Stacktrace:
+0   chromedriver                        0x000000010e9112c8 chromedriver + 4752072
+1   chromedriver                        0x000000010e891463 chromedriver + 4228195
+2   chromedriver                        0x000000010e4f498a chromedriver + 440714
+3   chromedriver                        0x000000010e5330b3 chromedriver + 696499
+4   chromedriver                        0x000000010e525f01 chromedriver + 642817
+5   chromedriver                        0x000000010e552d02 chromedriver + 826626
+6   chromedriver                        0x000000010e525685 chromedriver + 640645
+7   chromedriver                        0x000000010e552e5e chromedriver + 826974
+8   chromedriver                        0x000000010e56b134 chromedriver + 926004
+9   chromedriver                        0x000000010e552b33 chromedriver + 826163
+10  chromedriver                        0x000000010e5239fd chromedriver + 633341
+11  chromedriver                        0x000000010e525051 chromedriver + 639057
+12  chromedriver                        0x000000010e8de30e chromedriver + 4543246
+13  chromedriver                        0x000000010e8e2a88 chromedriver + 4561544
+14  chromedriver                        0x000000010e8ea6df chromedriver + 4593375
+15  chromedriver                        0x000000010e8e38fa chromedriver + 4565242
+16  chromedriver                        0x000000010e8b92cf chromedriver + 4391631
+17  chromedriver                        0x000000010e9025b8 chromedriver + 4691384
+18  chromedriver                        0x000000010e902739 chromedriver + 4691769
+19  chromedriver                        0x000000010e91881e chromedriver + 4782110
+20  libsystem_pthread.dylib             0x00007ff80a1244e1 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff80a11ff6b thread_start + 15
+
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='et1.12.9' class='none'>
+    <td class='errorCase'>
+        <div class='testcase'>test_09</div>
+    </td>
+    <td style="color: #495057">
+        <div>会员设置页面验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>5.29 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_et1.12.9')">error</a>
+        <div id='div_et1.12.9' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_09</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_et1.12.9')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>et1.12.9: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 4754, in test_09
+    click('/html/body/div[1]/div[2]/div[1]/div[1]/div[1]/div/div[3]/div/a[3]')
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 19, in click
+    find(ele).click()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webelement.py", line 88, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webelement.py", line 396, in _execute
+    return self._parent.execute(command, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 428, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 243, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=107.0.5304.87)
+Stacktrace:
+0   chromedriver                        0x000000010e9112c8 chromedriver + 4752072
+1   chromedriver                        0x000000010e891463 chromedriver + 4228195
+2   chromedriver                        0x000000010e4f498a chromedriver + 440714
+3   chromedriver                        0x000000010e5330b3 chromedriver + 696499
+4   chromedriver                        0x000000010e525f01 chromedriver + 642817
+5   chromedriver                        0x000000010e552d02 chromedriver + 826626
+6   chromedriver                        0x000000010e525685 chromedriver + 640645
+7   chromedriver                        0x000000010e552e5e chromedriver + 826974
+8   chromedriver                        0x000000010e56b134 chromedriver + 926004
+9   chromedriver                        0x000000010e552b33 chromedriver + 826163
+10  chromedriver                        0x000000010e5239fd chromedriver + 633341
+11  chromedriver                        0x000000010e525051 chromedriver + 639057
+12  chromedriver                        0x000000010e8de30e chromedriver + 4543246
+13  chromedriver                        0x000000010e8e2a88 chromedriver + 4561544
+14  chromedriver                        0x000000010e8ea6df chromedriver + 4593375
+15  chromedriver                        0x000000010e8e38fa chromedriver + 4565242
+16  chromedriver                        0x000000010e8b92cf chromedriver + 4391631
+17  chromedriver                        0x000000010e9025b8 chromedriver + 4691384
+18  chromedriver                        0x000000010e902739 chromedriver + 4691769
+19  chromedriver                        0x000000010e91881e chromedriver + 4782110
+20  libsystem_pthread.dylib             0x00007ff80a1244e1 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff80a11ff6b thread_start + 15
+
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='et1.12.10' class='none'>
+    <td class='errorCase'>
+        <div class='testcase'>test_10</div>
+    </td>
+    <td style="color: #495057">
+        <div>会员设置页面验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>5.02 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_et1.12.10')">error</a>
+        <div id='div_et1.12.10' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_10</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_et1.12.10')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>et1.12.10: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 4763, in test_10
+    before1 = find('/html/body/div/div[2]/div[3]/ui-view/div/div[2]/div/div[2]/div/div[1]/h3/label/input').get_attribute('class')
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 11, in find
+    return driver.find_element(By.XPATH, ele)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 855, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 428, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 243, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div/div[2]/div[3]/ui-view/div/div[2]/div/div[2]/div/div[1]/h3/label/input"}
+  (Session info: chrome=107.0.5304.87)
+Stacktrace:
+0   chromedriver                        0x000000010e9112c8 chromedriver + 4752072
+1   chromedriver                        0x000000010e891463 chromedriver + 4228195
+2   chromedriver                        0x000000010e4f4b18 chromedriver + 441112
+3   chromedriver                        0x000000010e531e21 chromedriver + 691745
+4   chromedriver                        0x000000010e532061 chromedriver + 692321
+5   chromedriver                        0x000000010e56d5e4 chromedriver + 935396
+6   chromedriver                        0x000000010e552d2d chromedriver + 826669
+7   chromedriver                        0x000000010e56b134 chromedriver + 926004
+8   chromedriver                        0x000000010e552b33 chromedriver + 826163
+9   chromedriver                        0x000000010e5239fd chromedriver + 633341
+10  chromedriver                        0x000000010e525051 chromedriver + 639057
+11  chromedriver                        0x000000010e8de30e chromedriver + 4543246
+12  chromedriver                        0x000000010e8e2a88 chromedriver + 4561544
+13  chromedriver                        0x000000010e8ea6df chromedriver + 4593375
+14  chromedriver                        0x000000010e8e38fa chromedriver + 4565242
+15  chromedriver                        0x000000010e8b92cf chromedriver + 4391631
+16  chromedriver                        0x000000010e9025b8 chromedriver + 4691384
+17  chromedriver                        0x000000010e902739 chromedriver + 4691769
+18  chromedriver                        0x000000010e91881e chromedriver + 4782110
+19  libsystem_pthread.dylib             0x00007ff80a1244e1 _pthread_start + 125
+20  libsystem_pthread.dylib             0x00007ff80a11ff6b thread_start + 15
+
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='et1.12.11' class='none'>
+    <td class='errorCase'>
+        <div class='testcase'>test_11</div>
+    </td>
+    <td style="color: #495057">
+        <div>审核列表验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>5.31 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_et1.12.11')">error</a>
+        <div id='div_et1.12.11' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_11</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_et1.12.11')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>et1.12.11: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 4781, in test_11
+    click('/html/body/div[1]/div[2]/div[1]/div[1]/div[1]/div/div[3]/div/a[4]')
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 19, in click
+    find(ele).click()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webelement.py", line 88, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webelement.py", line 396, in _execute
+    return self._parent.execute(command, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 428, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 243, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=107.0.5304.87)
+Stacktrace:
+0   chromedriver                        0x000000010e9112c8 chromedriver + 4752072
+1   chromedriver                        0x000000010e891463 chromedriver + 4228195
+2   chromedriver                        0x000000010e4f498a chromedriver + 440714
+3   chromedriver                        0x000000010e5330b3 chromedriver + 696499
+4   chromedriver                        0x000000010e525f01 chromedriver + 642817
+5   chromedriver                        0x000000010e552d02 chromedriver + 826626
+6   chromedriver                        0x000000010e525685 chromedriver + 640645
+7   chromedriver                        0x000000010e552e5e chromedriver + 826974
+8   chromedriver                        0x000000010e56b134 chromedriver + 926004
+9   chromedriver                        0x000000010e552b33 chromedriver + 826163
+10  chromedriver                        0x000000010e5239fd chromedriver + 633341
+11  chromedriver                        0x000000010e525051 chromedriver + 639057
+12  chromedriver                        0x000000010e8de30e chromedriver + 4543246
+13  chromedriver                        0x000000010e8e2a88 chromedriver + 4561544
+14  chromedriver                        0x000000010e8ea6df chromedriver + 4593375
+15  chromedriver                        0x000000010e8e38fa chromedriver + 4565242
+16  chromedriver                        0x000000010e8b92cf chromedriver + 4391631
+17  chromedriver                        0x000000010e9025b8 chromedriver + 4691384
+18  chromedriver                        0x000000010e902739 chromedriver + 4691769
+19  chromedriver                        0x000000010e91881e chromedriver + 4782110
+20  libsystem_pthread.dylib             0x00007ff80a1244e1 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff80a11ff6b thread_start + 15
+
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='et1.12.12' class='none'>
+    <td class='errorCase'>
+        <div class='testcase'>test_12</div>
+    </td>
+    <td style="color: #495057">
+        <div>会员等级页面验证</div>
+    </td>
+    <td style="color: #495057">
+        <div>5.33 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_et1.12.12')">error</a>
+        <div id='div_et1.12.12' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_12</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_et1.12.12')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>et1.12.12: Traceback (most recent call last):
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 4790, in test_12
+    click('/html/body/div[1]/div[2]/div[1]/div[1]/div[1]/div/div[3]/div/a[5]')
+  File "/Users/hoge/PycharmProjects/Project1/plus后台自动化脚本/TestCase.py", line 19, in click
+    find(ele).click()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webelement.py", line 88, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webelement.py", line 396, in _execute
+    return self._parent.execute(command, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 428, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 243, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=107.0.5304.87)
+Stacktrace:
+0   chromedriver                        0x000000010e9112c8 chromedriver + 4752072
+1   chromedriver                        0x000000010e891463 chromedriver + 4228195
+2   chromedriver                        0x000000010e4f498a chromedriver + 440714
+3   chromedriver                        0x000000010e5330b3 chromedriver + 696499
+4   chromedriver                        0x000000010e525f01 chromedriver + 642817
+5   chromedriver                        0x000000010e552d02 chromedriver + 826626
+6   chromedriver                        0x000000010e525685 chromedriver + 640645
+7   chromedriver                        0x000000010e552e5e chromedriver + 826974
+8   chromedriver                        0x000000010e56b134 chromedriver + 926004
+9   chromedriver                        0x000000010e552b33 chromedriver + 826163
+10  chromedriver                        0x000000010e5239fd chromedriver + 633341
+11  chromedriver                        0x000000010e525051 chromedriver + 639057
+12  chromedriver                        0x000000010e8de30e chromedriver + 4543246
+13  chromedriver                        0x000000010e8e2a88 chromedriver + 4561544
+14  chromedriver                        0x000000010e8ea6df chromedriver + 4593375
+15  chromedriver                        0x000000010e8e38fa chromedriver + 4565242
+16  chromedriver                        0x000000010e8b92cf chromedriver + 4391631
+17  chromedriver                        0x000000010e9025b8 chromedriver + 4691384
+18  chromedriver                        0x000000010e902739 chromedriver + 4691769
+19  chromedriver                        0x000000010e91881e chromedriver + 4782110
+20  libsystem_pthread.dylib             0x00007ff80a1244e1 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff80a11ff6b thread_start + 15
+
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+            </tbody>
+        </table>
+    </div>
+    <div class="card-footer border-0 py-5">
+        <span class="text-muted text-sm">Cases Total:
+            <button type="button" class="btn btn-sm bg-dark bg-opacity-20 bg-opacity-100-hover text-dark text-white-hover">171</button> =
+            <button type="button" class="btn btn-sm bg-success bg-opacity-20 bg-opacity-100-hover text-success text-white-hover">136</button> +
+            <button type="button" class="btn btn-sm bg-warning bg-opacity-20 bg-opacity-100-hover text-warning text-white-hover">27</button> +
+            <button type="button" class="btn btn-sm bg-danger bg-opacity-20 bg-opacity-100-hover text-danger text-white-hover">8</button> +
+            <button type="button" class="btn btn-sm bg-secondary bg-opacity-20 bg-opacity-100-hover text-secondary text-white-hover">0</button>
+        </span>
+    </div>
+</div>
+<div style="height:120px"></div>
+    
+
+
+<footer class="footer" style="height: 50px; position: fixed; width: 100%">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                XTestRunner 1.4.4; 2022 © 重定向科技 - http://itest.info
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>
