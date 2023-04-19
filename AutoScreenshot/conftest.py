@@ -19,7 +19,7 @@ def driver():
     driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/div[1]/div/form/div[2]/div/input').send_keys('liujifeng')
     driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/div[1]/div/form/div[3]/div/div/input').send_keys('ljfHoge@2022\n')
     sleep(1)
-    driver.find_element(By.XPATH, '/html/body/div/div[1]/div[5]/div/div[3]/div[1]/div/img').click()
+    driver.find_element(By.XPATH, '/html/body/div/div[1]/div[5]/div/div[2]/div[1]/div/img').click()
     windows = driver.window_handles
     driver.switch_to.window(windows[1])
     sleep(5)

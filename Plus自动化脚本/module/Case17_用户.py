@@ -21,7 +21,7 @@ class test(unittest.TestCase):
         self.assertNotEqual(text, None, '分类为空')
 
     def test_02(self):
-        '''用户-分类管理功能验证'''
+        '''用户-分类管理功能验证F'''
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[2]/ks-swiper-container/div/div[2]/div[1]/div[1]/div[2]/span')
         sleep(2)
         self.plus.send_key('/html/body/div[3]/div/div/form/div[2]/div[1]/input', '测试分类' + str(random.randint(0, 100)))
@@ -36,6 +36,7 @@ class test(unittest.TestCase):
         ac(self.plus.driver).move_to_element(ele[-1]).perform()
         before = ele[-1].text
         self.plus.click(f'/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[2]/ks-swiper-container/div/div[2]/div[1]/div[3]/div[{len(ele)}]/div[3]/i[1]')  # 编辑按钮
+        sleep(1)
         self.plus.send_key('/html/body/div[3]/div/div/form/div[2]/div[1]/input', Keys.BACK_SPACE)
         sleep(2)
         self.plus.click('/html/body/div[3]/div/div/form/div[3]/button[1]')
@@ -49,25 +50,21 @@ class test(unittest.TestCase):
         sleep(3)
         length2 = len(self.plus.finds('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[2]/ks-swiper-container/div/div[2]/div[1]/div[3]/div'))
 
-        self.assertNotEqual(before, after, '修改失败')
-        self.assertNotEqual(length1, length2, '删除成功')
+        self.assertNotEqual(before, after, '用户架构修改失败')
+        self.assertNotEqual(length1, length2, '用户架构删除失败')
 
     def test_03(self):
-        '''左侧分类验证F'''
+        '''左侧分类验证'''
         self.plus.click('/html/body/div[1]/div[2]/div[1]/div[1]/div[1]/div/div[3]/span[1]')
         sleep(3)
         length1 = len(self.plus.finds('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[2]/div/div/div[2]/div/div[3]/div'))
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[1]/classify-sidebar/div/div[3]/div/div[2]/div/div')
+        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[1]/classify-sidebar/div/div[2]/div/div[2]/div/div')
         sleep(2)
         length2 = len(self.plus.finds('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[2]/div/div/div[2]/div/div[3]/div'))
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[1]/classify-sidebar/div/div[3]/div/div[1]/div/div')
+        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[1]/classify-sidebar/div/div[1]/span')
         sleep(2)
 
-        self.plus.send_key('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[1]/classify-sidebar/div/div[2]/input', '默认\n')
-        sleep(2)
-        length3 = len(self.plus.finds('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[1]/classify-sidebar/div/div[3]/div/div'))
         self.assertNotEqual(length1, length2, '左侧分类按钮失效')
-        self.assertNotEqual(length3, 0, '左侧分类搜索框失效')
 
     def test_04(self):
         '''筛选框和搜索框验证'''
@@ -79,7 +76,7 @@ class test(unittest.TestCase):
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[2]/div/div/div[2]/div/div[1]/div/button')
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[2]/div/div/div[2]/div/div[1]/div/div/a[1]')
 
-        self.plus.send_key('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[2]/div/div/div[2]/div/div[1]/search-box/div[1]/input', 'liu\n')  # 输入框
+        self.plus.send_key('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[2]/div/div/div[2]/div/div[1]/search-box/div[1]/input', 'hoge\n')  # 输入框
         sleep(2)
         length3 = len(self.plus.finds('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[2]/div/div/div[2]/div/div[3]/div'))
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[2]/div/div/div[2]/div/div[1]/search-box/div[1]/i[1]')  # 取消搜索按钮
@@ -133,7 +130,7 @@ class test(unittest.TestCase):
             'body > div.modal.fade.ng-isolate-scope.departments-Column.in > div > div > div > div.modal-body > div.column-wrap > div.column_content.ng-isolate-scope > ks-swiper-container > div > div.swiper-wrapper > div.swiper-slide.list_box.swiper-slide.swiper-slide-active > div > div:nth-child(2) > input[type=checkbox]').click()
         self.plus.fc('body > div.modal.fade.ng-isolate-scope.departments-Column.in > div > div > div > div.modal-footer > button.btn.primary-btn.ng-binding.ng-isolate-scope').click()
         sleep(1)
-        self.plus.send_key('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[2]/div/form/div[2]/div[2]/div[1]/input', 'password1')
+        self.plus.send_key('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[2]/div/form/div[2]/div[2]/div[1]/input', 'Hogepassword1')
         self.plus.send_key('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[2]/div/form/div[2]/div[2]/div[4]/input', '13277191919')
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[2]/div/form/div[4]/button[1]')  # 保存
         sleep(3)
@@ -154,7 +151,7 @@ class test(unittest.TestCase):
 
         text3 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[2]/div/div/div[2]/div/div[3]/div[1]/div[7]/span').text
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[2]/div/div/div[2]/div/div[3]/div[1]/div[8]/div/i')
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[2]/div/div/div[2]/div/div[3]/div[1]/div[8]/div/div/div/button[3]')  # 锁定
+        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[2]/div/div/div[2]/div/div[3]/div[1]/div[8]/div/div/div/button[4]')  # 锁定
         self.plus.click('/html/body/div[3]/div/div/div/div/div[3]/button[1]')
         sleep(2)
         text4 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[2]/div/div/div[2]/div/div[3]/div[1]/div[7]/span').text

@@ -65,6 +65,3 @@ class test(unittest.TestCase, base):
         sleep(1)
         self.plus.click('/html/body/div[4]/div/div/div/div/div[3]/button[1]')  # 删除
         sleep(3)
-
-        # 若存在则清除用户模块中的用户 name、示例账户
-        pass

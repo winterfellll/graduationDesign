@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Apr 19 17:13:33 CST 2023","Wed Apr 19 17:13:36 CST 2023","2319","TestCase","test_1","Test","","","未登录时进入充值模块",""
+"passed","Wed Apr 19 17:13:36 CST 2023","Wed Apr 19 17:13:40 CST 2023","4816","TestCase","test_1","Test","","","全部作品-按字数排序",""
+"failed","Wed Apr 19 17:13:30 CST 2023","Wed Apr 19 17:13:33 CST 2023","2410","TestCase","test_1","Test","","","未登录时进入书架",""

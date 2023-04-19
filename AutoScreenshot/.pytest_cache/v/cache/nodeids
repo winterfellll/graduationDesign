@@ -1,4 +1,5 @@
 [
   "test_1.py::Test::test_01",
+  "test_1.py::Test::test_02",
   "test_2.py::Test::test_01"
 ]

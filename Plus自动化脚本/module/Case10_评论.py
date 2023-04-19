@@ -40,19 +40,15 @@ class test(unittest.TestCase):
     def test_02(self):
         '''左侧分类按钮验证'''
         self.plus.click('/html/body/div[1]/div[2]/div[1]/div[1]/div[1]/div/div[3]/span[1]')
+        sleep(5)
         text1 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[2]/div/div/div[3]/div/div/div').text
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/classify-sidebar/div/div[3]/div/div[1]/div/div')
-        sleep(3)
+        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/classify-sidebar/div/div[2]/div/div[2]/div/div')
+        sleep(5)
         text2 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[2]/div/div/div[3]/div/div/div').text
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/classify-sidebar/div/div[1]/span')
-        sleep(2)
-        text3 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/classify-sidebar/div/div[3]/div').text
-        self.plus.send_key('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/classify-sidebar/div/div[2]/input', '频\n')
-        sleep(2)
-        text4 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/classify-sidebar/div/div[3]/div').text
+        sleep(3)
 
         self.assertNotEqual(text1, text2, '左侧分类按钮失效')
-        self.assertNotEqual(text3, text4, '左侧分类搜索框失效')
 
     def test_03(self):
         '''筛选框验证'''

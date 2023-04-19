@@ -8,11 +8,10 @@ def func(dict):
     for i in dict.values():
         if '$' in i:
             a = i.split('$')[1]
-            dict[get_dict_key(dict, i)] = eval('var' + a)
+            dict[get_dict_key(dict, i)] = varDict[a]
     return dict
 
 
-vartoken = 'bearer adsuioqweqwedasd'
-
-dic = {'token': '$token'}
+varDict = dict(token='Bearer adsuioqweqwedasd')  # 全局变量放在字典中
+dic = {'token': '$token'}  # 实现 '$token' => dict1['token']
 print(func(dic))

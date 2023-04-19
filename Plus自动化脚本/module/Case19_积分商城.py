@@ -190,7 +190,7 @@ class test(unittest.TestCase):
         pyautogui.typewrite('jpg')
         pyautogui.hotkey('enter')
         pyautogui.hotkey('enter')
-        sleep(2)
+        sleep(3)
         pyautogui.click(700, 400)  # 选择图片
         sleep(1)
         pyautogui.click(1400, 850)

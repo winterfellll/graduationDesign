@@ -9,3 +9,5 @@ class Test():
         a = mainPage(driver)
         a.click()
         sleep(2)
+
+    def test_02(self,driver):

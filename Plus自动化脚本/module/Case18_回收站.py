@@ -59,7 +59,7 @@ class test(unittest.TestCase):
     def test_05(self):
         '''删除稿件进入回收站验证'''
         self.plus.click('/html/body/div[1]/div[2]/div[1]/div[1]/ul/li[7]/i')
-        self.plus.click('/html/body/div[1]/div[2]/div[1]/div[1]/div[2]/ul[1]/li[1]/a')  # 文稿
+        self.plus.driver.find_element(By.LINK_TEXT, '文稿').click()  # 文稿
         sleep(5)
         text1 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[3]/div[2]/div[1]/a/span').text  # 稿件1
         text2 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[2]/div[1]/div[3]/div[2]/div[1]/a/span').text  # 稿件2
@@ -145,7 +145,8 @@ class test(unittest.TestCase):
         sleep(2)
         length2 = len(self.plus.finds('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[2]/div/div[2]/div/div[3]/div'))
 
-        self.plus.click('/html/body/div[1]/div[2]/div[1]/div[1]/div[2]/ul[1]/li[1]/a')  # 文稿
+        self.plus.click('/html/body/div[1]/div[2]/div[1]/div[1]/ul/li[7]/i')
+        self.plus.driver.find_element(By.LINK_TEXT, '文稿').click()  # 文稿
         sleep(4)
         text2 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[3]/div[2]/div[1]/a/span').text
         self.plus.driver.back()

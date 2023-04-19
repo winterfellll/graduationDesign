@@ -16,18 +16,13 @@ class test(unittest.TestCase, base):
     def test_01(self):
         '''左侧分类验证'''
         text1 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[2]/div/div/div/div[2]/div[1]').text
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[1]/classify-sidebar/div/div[3]/div/div[1]/div/div')
+        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[1]/classify-sidebar/div/div[2]/div/div[2]/div/div')
         sleep(2)
         text2 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[2]/div/div/div/div[2]/div[1]').text
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[1]/classify-sidebar/div/div[1]/span[1]')
+        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[1]/classify-sidebar/div/div[1]/span')
         sleep(3)
-        text3 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[1]/classify-sidebar/div/div[3]/div[1]/div').text
-        self.plus.send_key('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[1]/classify-sidebar/div/div[2]/input', '直\n')  # 搜索框
-        sleep(2)
-        text4 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[1]/classify-sidebar/div/div[3]/div[1]/div').text
 
         self.assertNotEqual(text1, text2, '左侧分类按钮失效')
-        self.assertNotEqual(text3, text4, '左侧分类搜索框失效')
 
     def test_02(self):
         '''筛选框验证'''
@@ -53,13 +48,6 @@ class test(unittest.TestCase, base):
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[2]/div/div/div/div[2]/div[1]/div[1]/div[3]/button')
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[2]/div/div/div/div[2]/div[1]/div[1]/div[3]/ul/li[1]')
 
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[2]/div/div/div/div[2]/div[1]/div[1]/div[4]/button')
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[2]/div/div/div/div[2]/div[1]/div[1]/div[4]/ul/li[2]')
-        sleep(2)
-        text4 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[2]/div/div/div/div[2]/div[1]').text
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[2]/div/div/div/div[2]/div[1]/div[1]/div[4]/button')
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[2]/div/div/div/div[2]/div[1]/div[1]/div[4]/ul/li[1]')
-
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[2]/div/div/div/div[2]/div[1]/div[1]/div[5]/div[1]')
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[2]/div/div/div/div[2]/div[1]/div[1]/div[5]/div[2]/div[2]')
         sleep(2)
@@ -69,7 +57,6 @@ class test(unittest.TestCase, base):
         self.assertNotEqual(text, text1, '状态筛选框失效')
         self.assertNotEqual(text, text2, '类型筛选框失效')
         self.assertNotEqual(text, text3, '时间筛选框失效')
-        self.assertNotEqual(text, text4, '权重筛选框失效')
         self.assertNotEqual(text, text5, '标签筛选框失效')
 
     def test_03(self):
@@ -164,7 +151,7 @@ class test(unittest.TestCase, base):
         sleep(2)
         self.plus.fc("[data='17']").click()
         self.plus.fc("[ng-click='vm.save()']").click()
-        sleep(2)
+        sleep(3)
         length1 = len(self.plus.finds("//h5[@class='modal-title ng-binding']"))
         self.plus.driver.refresh()
         sleep(5)
@@ -204,6 +191,7 @@ class test(unittest.TestCase, base):
 
     def test_10(self):
         '''发布库稿件点击验证F'''
+        # 待完善
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[2]/div/div/div/div[2]/div[1]/div[3]/div[1]/div[2]/div[2]/div[1]/div[1]/a/span')
         sleep(5)
         windows = self.plus.driver.window_handles
@@ -217,7 +205,7 @@ class test(unittest.TestCase, base):
         sleep(2)
 
     def test_11(self):
-        '''更多按钮验证'''
+        '''更多按钮验证F'''
         text1 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[2]/div/div/div/div[2]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/a/span').text
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[2]/div/div/div/div[2]/div[1]/div[4]/div[1]/div[4]/div/i')
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[2]/div/div/div/div[2]/div[1]/div[4]/div[1]/div[4]/div/div/div/button[1]')  # 编辑
@@ -260,17 +248,17 @@ class test(unittest.TestCase, base):
         text9 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[2]/div/div/div/div[2]/div[1]/div[4]/div[1]/div[2]/div[2]/div[2]/div[1]/span[1]/span[7]').text
 
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[2]/div/div/div/div[2]/div[1]/div[4]/div[1]/div[4]/div/i')
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[2]/div/div/div/div[2]/div[1]/div[4]/div[1]/div[4]/div/div/div/button[12]')  # 操作记录按钮
+        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[2]/div/div/div/div[2]/div[1]/div[4]/div[1]/div[4]/div/div/div/button[13]')  # 操作记录按钮
         sleep(3)
         if len(self.plus.finds('/html/body/div[4]/div/div/div/div[2]/div/div[1]/div[1]/div/div[1]/div/div[3]/span[1]')) != 1:
             self.assertEqual(len(self.plus.finds('/html/body/div[4]/div/div/div/div[2]/div/div[1]/div[1]/div/div[1]/div/div[3]/span[1]')), 1, '操作记录展示异常')
-        text10 = self.plus.find('/html/body/div[4]/div/div/div/div[2]/div/div[1]/div[1]/div/div[1]/div/div[3]/span[1]').text
+        text10 = self.plus.find('/html/body/div[4]/div/div/div/div[2]/div/div[1]/div[1]/div/div[1]/div/div[3]/span[2]').text
         self.plus.click('/html/body/div[4]/div/div/div/div[1]/div[1]/div/i')
         sleep(2)
 
         text11 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[2]/div/div/div/div[2]/div[1]/div[4]/div[1]').text
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[2]/div/div/div/div[2]/div[1]/div[4]/div[1]/div[4]/div/i')
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[2]/div/div/div/div[2]/div[1]/div[4]/div[1]/div[4]/div/div/div/button[10]')  # 删除按钮
+        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[2]/div/div/div/div[2]/div[1]/div[4]/div[1]/div[4]/div/div/div/button[11]')  # 删除按钮
         sleep(2)
         self.plus.click('/html/body/div[4]/div/div/div/div[3]/button[1]')
         sleep(3)
@@ -279,7 +267,7 @@ class test(unittest.TestCase, base):
         self.assertEqual(text3, text, '置顶功能异常')
         self.assertNotEqual(text4, text5, '修改标题功能异常')
         self.assertNotEqual(text8, text9, '修改发布时间功能异常')
-        self.assertEqual(text10, 'ljf', '操作记录展示异常')
+        self.assertEqual(text10, '修改发布时间', '操作记录展示异常')
         self.assertNotEqual(text11, text12, '删除功能异常')
         self.assertNotEqual(text1, text2, '编辑后标题未修改')
 
@@ -310,7 +298,7 @@ class test(unittest.TestCase, base):
         ac(self.plus.driver).move_to_element(ele[-1]).perform()
         before = ele[-1].text
         self.plus.click(f'/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[2]/ks-swiper-container/div/div[2]/div[1]/div[3]/div[{len(ele)}]/div[4]/i[1]')  # 编辑按钮
-        sleep(2)
+        sleep(1)
         self.plus.send_key('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[3]/div/div/div/div[1]/div[2]/div[1]/input', Keys.BACK_SPACE)
         sleep(2)
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div/div/div[3]/div/div/div/div[6]/button')

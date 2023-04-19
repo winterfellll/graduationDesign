@@ -28,7 +28,7 @@ class test(unittest.TestCase):
     def test_03(self):
         '''文稿页面分类按钮、筛选框、搜索框验证'''
         self.plus.click('/html/body/div[1]/div[2]/div[1]/div[1]/div[1]/div/div[3]/span[1]')
-        sleep(5)
+        sleep(3)
         before1 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div').text
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[1]/classify-sidebar/div/div[2]/div/div[2]/div/div')
         sleep(2)
@@ -132,25 +132,25 @@ class test(unittest.TestCase):
 
     def test_06(self):
         '''翻页按钮验证'''
-        before1 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]').text
+        before1 = self.plus.find(base.first_).text
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[11]/page-nation/div/div[2]/div[1]/button[3]')  # 翻页按钮
         sleep(2)
-        after1 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]').text
+        after1 = self.plus.find(base.first_).text
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[11]/page-nation/div/div[2]/div[1]/button[6]')  # 翻页按钮
         sleep(3)
-        after2 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]').text
+        after2 = self.plus.find(base.first_).text
 
         self.assertNotEqual(before1, after1, '翻页按钮失效')
         self.assertNotEqual(after1, after2, '翻页按钮失效')
 
     def test_07(self):
         '''跳至输入框验证'''
-        after2 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]').text
+        after2 = self.plus.find(base.first_).text
         self.plus.fc(
             '#view > ui-view > div > div.mxu_side_wrapper.mxu_content_wrapper.ng-scope > div.member-cont.second-view > div > div > div > div.hoge-flex > div > div.list.white.border-bottom-radius.ng-pristine.ng-untouched.ng-valid.ng-not-empty > div.list_bottom.hoge-table-bottom.border-bottom-radius > page-nation > div > div.list_page > div.goTo-group.btn-group > input').send_keys(
             '1\n')
         sleep(2)
-        after3 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]').text
+        after3 = self.plus.find(base.first_).text
         self.assertNotEqual(after3, after2, '跳至输入框失效')
 
     def test_08(self):
@@ -168,11 +168,11 @@ class test(unittest.TestCase):
         '''新增通稿-返回按钮和取消按钮验证'''
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[1]/div[2]/div/div/div')
         sleep(5)
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/main/nav/div/div/div[2]/span')  # 返回按钮验证
+        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/main/nav/div/div/div[2]/span')  # 返回按钮
         sleep(3)
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[1]/div[2]/div/div/div')
         sleep(3)
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/main/div[2]/div[1]/div/div[2]/button[4]')  # 取消按钮验证
+        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/main/div[2]/div[1]/div/div[2]/button[4]')  # 取消按钮
         sleep(3)
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[1]/div[2]/div/div/div')
         sleep(3)
@@ -240,24 +240,23 @@ class test(unittest.TestCase):
         sleep(2)
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/main/div[2]/aside[2]/div/div/key-words/div/div[1]/div[1]/i')
         sleep(2)
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/main/div[2]/aside[1]/div/div/div/div[2]/div[1]/div/content-attr/div/div[3]/div/div/classify-preview/div/div[1]/div[1]')  # 分类
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/main/div[2]/aside[1]/div/div/div/div[2]/div[1]/div/content-attr/div/div[3]/div/div/classify-preview/div/div[2]/classify-box/div/div/ul/li[3]/div')
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/main/div[2]/aside[1]/div/div/div/div[2]/div[1]/div/content-attr/div/div[5]/div/div/content-publish/div/div/div/div')  # 发布至
-        sleep(2)
-        self.plus.click('/html/body/div[5]/div/div/div/div[2]/div[1]/div[2]/ks-swiper-container/div/div[2]/div[1]/div/div[1]/input')
-        self.plus.click('/html/body/div[5]/div/div/div/div[3]/button[1]')
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/main/div[2]/aside[1]/div/div/div/div[2]/div[1]/div/content-attr/div/div[6]/div/div/div/div')  # 专题
-        sleep(2)
-        self.plus.click('/html/body/div[5]/div/div/div/div/div[5]/button[2]')
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/main/div[2]/aside[1]/div/div/div/div[2]/div[1]/div/content-attr/div/div[8]/div/label[2]/span[1]')  # 评论
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/main/div[2]/aside[1]/div/div/div/div[2]/div[1]/div/content-attr/div/div[9]/div/label[2]/span[1]')  # 原创
-        if len(self.plus.finds('/html/body/div[1]/div[2]/div[3]/ui-view/div/main/div[2]/aside[1]/div/div/div/div[2]/div[1]/div/content-attr/div/div[11]/div/div/span')):
-            self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/main/div[2]/aside[1]/div/div/div/div[2]/div[1]/div/content-attr/div/div[11]/div/div/span')  # 媒体号
-            sleep(2)
-            self.plus.click('/html/body/div[5]/div/div/div/div/div[2]/div[1]/div/div')
-            self.plus.click('/html/body/div[5]/div/div/div/div/div[3]/button[1]')
 
-        self.plus.send_key('//*[@id="original_statement"]', 'statement')
+        self.plus.fc(".md-input").click()  # 分类
+        self.plus.fc(".list-group > li:nth-of-type(3) > .group-item").click()
+        self.plus.fc(".select-color").click()  # 栏目
+        self.plus.fc("[data='5']").click()
+        self.plus.fc("[ng-click='vm.save()']").click()
+        sleep(2)
+        self.plus.fc("[title='点击添加到专题']").click()  # 专题
+        sleep(2)
+        self.plus.fc(".btn[ng-click='vm.close()']").click()
+        self.plus.fc("[ng-show='vm.commentsShow'] .switch-close").click()  # 评论
+        # if len(self.plus.finds('/html/body/div[1]/div[2]/div[3]/ui-view/div/main/div[2]/aside[1]/div/div/div/div[2]/div[1]/div/content-attr/div/div[11]/div/div/span')):
+        #     self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/main/div[2]/aside[1]/div/div/div/div[2]/div[1]/div/content-attr/div/div[11]/div/div/span')  # 媒体号
+        #     sleep(2)
+        #     self.plus.click('/html/body/div[5]/div/div/div/div/div[2]/div[1]/div/div')
+        #     self.plus.click('/html/body/div[5]/div/div/div/div/div[3]/button[1]')
+
         self.plus.send_key('//*[@id="subtitle"]', 'subtitle')
         self.plus.send_key('//*[@id="author"]', 'author')
         self.plus.send_key('//*[@id="source"]', 'source')
@@ -284,7 +283,7 @@ class test(unittest.TestCase):
         sleep(2)
         text3 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/main/div[2]/aside[2]/div/div/key-words/div/div[2]/div').text
         keyword1 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/main/div/aside[2]/div/div/key-words/div/div[2]').text
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/main/div/aside[2]/div/div/key-words/div/div[1]/div[1]/i')  # 匹配关键词
+        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/main/div[2]/aside[2]/div/div/key-words/div/div[1]/div[1]/i')  # 匹配关键词
         sleep(3)
         keyword2 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/main/div/aside[2]/div/div/key-words/div/div[2]').text
 
@@ -299,7 +298,8 @@ class test(unittest.TestCase):
         after5 = len(self.plus.finds('/html/body/div[1]/div[2]/div[3]/ui-view/div/main/div[2]/aside[2]/div/div/div[1]/content-relevant/div/div[2]/div/div'))
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/main/div[2]/aside[2]/div/div/div[1]/content-relevant/div/div[1]/div[1]/div[1]/i')
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/main/div[2]/aside[2]/div/div/div[1]/content-relevant/div/div[1]/div[2]/button[2]')
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/main/div[2]/aside[2]/div/div/div[4]/div[1]/img')  # 屏蔽词检测
+        sleep(2)
+        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/main/div[2]/aside[2]/div/div/div[3]/div[1]/img')  # 屏蔽词检测
         sleep(2)
 
         self.assertIn('keyword', list, '关键词新增失败')
@@ -313,9 +313,9 @@ class test(unittest.TestCase):
         '''新增页面底部按钮验证F'''
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/main/div[2]/div[1]/div/div[2]/button[1]')  # 预览
         sleep(3)
-        length = len(self.plus.finds('/html/body/div[5]/div/div/div/div[2]/div/img'))
-        if len(self.plus.finds('/html/body/div[5]/div/div/div/div[1]/div[3]/span')) == 1:
-            self.plus.click('/html/body/div[5]/div/div/div/div[1]/div[3]/span')
+        length = len(self.plus.driver.find_elements(By.CSS_SELECTOR, "[ng-click='vm.goCopy()']"))
+        if len(self.plus.finds("//span[.='退出版本预览']")) == 1:
+            self.plus.click("//span[.='退出版本预览']")
         sleep(2)
 
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/main/div[2]/div[1]/div/div[2]/button[3]')  # 保存
@@ -323,12 +323,12 @@ class test(unittest.TestCase):
         text = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[3]/div[2]/div[1]/a/span').text
 
         self.assertEqual(text, '美国洛杉矶仇恨犯罪达近20年最高水平', '新增失败')
-        self.assertEqual(length, 0, '新增页面预览功能失效')
+        self.assertEqual(length, 1, '新增页面预览功能失效')
 
     def test_14(self):
         '''更多按钮验证F'''
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[11]/div/i')
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[11]/div/div/div/button[2]')  # 编辑
+        self.plus.click(base.more_button11)
+        self.plus.click(base.more_button11 + '/div/div/div/button[2]')  # 编辑
         sleep(5)
         self.plus.fc('#view > ui-view > div > main > div.form-content.hoge-flex > div.edit-bg > div > div.content > div.content-form-title > div > textarea').send_keys('1')
         text1 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/main/div[2]/div[1]/div/div[1]/div[1]/div/textarea').get_attribute('value')
@@ -336,65 +336,68 @@ class test(unittest.TestCase):
         sleep(5)
         text2 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[3]/div[2]/div[1]/a/span').text
 
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[11]/div/i')
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[11]/div/div/div/button[3]')  # 预览链接
+        self.plus.click(base.more_button11)
+        self.plus.click(base.more_button11 + '/div/div/div/button[3]')  # 预览链接
         sleep(2)
-        text3 = self.plus.find('//*[@id="copy-text"]').text
+        text3 = self.plus.find('//*[@id="copy-text"]').get_attribute('value')
         sleep(2)
         self.plus.fc('.fa-remove').click()
 
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[11]/div/i')
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[11]/div/div/div/button[4]')  # 预览
-        sleep(3)
-        length = len(self.plus.finds('/html/body/div[6]/div/div/div/div[2]/div/img'))
-        self.plus.click('/html/body/div[6]/div/div/div/div[1]/div[3]/span')
+        self.plus.click(base.more_button11)
+        self.plus.click(base.more_button11 + '/div/div/div/button[4]')  # 预览
+        sleep(5)
+        flag = 1
+        for i in range(10):
+            if len(self.plus.finds(f'/html/body/div[{i}]/div/div/div/button')) == 1:
+                flag = 0
+        self.plus.fc('.close > span').click()
 
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[11]/div/i')
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[11]/div/div/div/button[6]')  # 操作记录
+        self.plus.click(base.more_button11)
+        self.plus.click(base.more_button11 + '/div/div/div/button[6]')  # 操作记录
         sleep(2)
         text4 = self.plus.find('//*[@id="history-version"]').text
         self.plus.click('/html/body/div[6]/div/div/div/div[1]/div[1]/div/i')
 
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[11]/div/i')
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[11]/div/div/div/div[4]')  # 定时发布
+        self.plus.click(base.more_button11)
+        self.plus.click(base.more_button11 + '/div/div/div/div[4]')  # 定时发布
         sleep(2)
         self.plus.fc(
             'body > div.modal.fade.ng-isolate-scope.content-time-modal.in > div > div > div > div:nth-child(2) > div.column-wrap > div.column_content.ng-isolate-scope > ks-swiper-container > div > div.swiper-wrapper > div.swiper-slide.list_box.swiper-slide-active > div > div:nth-child(6) > input[type=checkbox]').click()
         self.plus.find('/html/body/div[6]/div/div/div/div[3]/div[2]/div/div/div/div/div[2]/input').clear()
         self.plus.find('/html/body/div[6]/div/div/div/div[3]/div[2]/div/div/div/div/div[2]/input').send_keys((datetime.datetime.now() + datetime.timedelta(minutes=5)).strftime("%H:%M"))
         sleep(2)
-        self.plus.click('/html/body/div[6]/div/div/div/div[5]/button[2]')  # 保存
+        self.plus.fc("[ng-click='vm.save()']").click()  # 保存
         sleep(3)
         length1 = len(self.plus.finds('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[8]/span[2]'))
 
         text5 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[5]/div/span').text
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[11]/div/i')
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[11]/div/div/div/button[13]')  # 审核
+        self.plus.click(base.more_button11)
+        self.plus.click(base.more_button11 + '/div/div/div/button[13]')  # 审核
         sleep(3)
         text6 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[5]/div/span').text
 
         text7 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[5]/div/span').text
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[11]/div/i')
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[11]/div/div/div/button[12]')  # 打回
+        self.plus.click(base.more_button11)
+        self.plus.click(base.more_button11 + '/div/div/div/button[12]')  # 打回
         self.plus.click('/html/body/div[6]/div/div/div/div/div[3]/button[1]')
         sleep(5)
         text8 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[5]/div/span').text
 
         file1 = len([lists for lists in os.listdir(path) if os.path.isfile(os.path.join(path, lists))])
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[11]/div/i')
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[11]/div/div/div/button[14]')  # 下载
+        self.plus.click(base.more_button11)
+        self.plus.click(base.more_button11 + '/div/div/div/button[14]')  # 下载
         sleep(3)
         file2 = len([lists for lists in os.listdir(path) if os.path.isfile(os.path.join(path, lists))])
         if len(self.plus.finds('/html/body/pre')):  # 下载可能报错
             self.plus.driver.back()
 
-        text9 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[10]/span[2]').text  # 时间
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[11]/div/i')
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[11]/div/div/div/button[13]')  # 删除
+        text9 = self.plus.find(base.first_).text
+        self.plus.click(base.more_button11)
+        self.plus.click(base.more_button11 + '/div/div/div/button[13]')  # 删除
         sleep(2)
         self.plus.fc("[ng-click='save()']").click()
         sleep(3)
-        text10 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[10]/span[2]').text
+        text10 = self.plus.find(base.first_).text
 
         self.assertEqual(text1, text2, '另存为按钮失效')
         self.assertNotEqual('', text4, '操作记录为空')
@@ -404,12 +407,12 @@ class test(unittest.TestCase):
         self.assertNotEqual(text9, text10, '删除按钮失效')
         self.assertNotEqual(file1, file2, '下载功能失效')
         self.assertNotEqual('', text3, '预览链接按钮失效')
-        self.assertNotEqual(1, length, '预览失败')
+        self.assertNotEqual(1, flag, '预览失败')
 
     def test_15(self):
-        '''文稿底部按钮验证'''
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[11]/div/i')
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[11]/div/div/div/button[2]')
+        '''文稿底部按钮验证F'''
+        self.plus.click(base.more_button11)
+        self.plus.click(base.more_button11 + '/div/div/div/button[2]')
         sleep(8)
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/main/div[2]/div[1]/div/div[2]/button[2]')  # 另存为
         sleep(5)
@@ -442,7 +445,7 @@ class test(unittest.TestCase):
 
         ac(self.plus.driver).scroll_by_amount(0, -500).perform()
         sleep(2)
-        before = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]').text
+        before = self.plus.find(base.first_).text
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[1]/label/input')
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[11]/div[2]/div/button[5]')  # 移动
         sleep(2)
@@ -451,30 +454,30 @@ class test(unittest.TestCase):
         sleep(2)
         self.plus.fc('body > div.modal.fade.ng-isolate-scope.bulkCopy-contentmodal.in > div > div > div > div.modal-footer > button.btn.primary-btn.ng-binding.ng-isolate-scope').click()
         sleep(4)
-        after = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]').text
+        after = self.plus.find(base.first_).text
 
         ac(self.plus.driver).scroll_by_amount(0, -500).perform()
         sleep(2)
-        text3 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]').text
+        text3 = self.plus.find(base.first_).text
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[1]/label/input')
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[11]/div[2]/div/button[3]')  # 删除
         sleep(2)
         self.plus.click('/html/body/div[6]/div/div/div/div/div[3]/button[1]')
         sleep(5)
-        text4 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]').text
+        text4 = self.plus.find(base.first_).text
 
         self.assertNotEqual(text1, '待审核', '底部审核按钮失效')
         self.assertEqual(text2, '已打回', '底部打回按钮失效')
         self.assertNotEqual(before, after, '底部移动功能失效')
         self.assertNotEqual(text3, text4, '底部删除按钮失效')
-        self.assertEqual(length, 1, '发布的栏目未出现')
+        self.assertEqual(length, 1, '文稿另存为后审核发布，发布的栏目未出现')
 
     def test_16(self):
         '''文稿底部按钮验证'''
         ac(self.plus.driver).scroll_by_amount(0, -500).perform()
         sleep(2)
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[11]/div/i')
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[11]/div/div/div/button[2]')
+        self.plus.click(base.more_button11)
+        self.plus.click(base.more_button11 + '/div/div/div/button[2]')
         sleep(8)
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/main/div[2]/div[1]/div/div[2]/button[2]')  # 另存为
         sleep(5)
@@ -482,8 +485,9 @@ class test(unittest.TestCase):
         ac(self.plus.driver).scroll_by_amount(0, -500).perform()
         sleep(2)
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[1]/label/input')
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[11]/div[2]/div/button[8]')  # 选择栏目
-        self.plus.click('/html/body/div[6]/div/div/div/div[3]/button[1]')
+        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[11]/div[2]/div/button[9]')  # 选择栏目
+        sleep(2)
+        self.plus.fc("[type='submit']").click()
         sleep(2)
         self.plus.click('/html/body/div[7]/div/div/div/div[2]/div[1]/div[2]/ks-swiper-container/div/div[2]/div/div/div[5]/input')
         self.plus.click('/html/body/div[7]/div/div/div/div[3]/button[1]')
@@ -493,7 +497,7 @@ class test(unittest.TestCase):
         ac(self.plus.driver).scroll_by_amount(0, -500).perform()
         sleep(2)
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[1]/label/input')
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[11]/div[2]/div/button[7]')  # 提审
+        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[11]/div[2]/div/button[8]')  # 提审
         sleep(4)
         self.plus.click('/html/body/div[6]/div/div/div/div[2]/div[2]/button[2]')
         sleep(4)
@@ -502,12 +506,12 @@ class test(unittest.TestCase):
         ac(self.plus.driver).scroll_by_amount(0, -500).perform()
         sleep(2)
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[1]/label/input')
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[11]/div[2]/div/button[9]')  # 设置标签
+        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[11]/div[2]/div/button[10]')  # 设置标签
         sleep(2)
         self.plus.click('/html/body/div[6]/div/div/div/div[2]/div[1]/div[2]/div[1]/input')
         self.plus.click('/html/body/div[6]/div/div/div/div[3]/button[1]')
         sleep(2)
-        length = len(self.plus.finds('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[5]/div[1]/span'))
+        length = len(self.plus.finds(base.status))
 
         self.assertEqual(text1, '发现', '选择栏目按钮失效')
         self.assertEqual(text2, '审核中', '提审按钮失效')

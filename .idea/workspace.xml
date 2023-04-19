@@ -5,14 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da8e2acd-5be7-4585-8c88-4833ac54eebc" name="变更" comment="1">
+      <change beforePath="$PROJECT_DIR$/.idea/Project1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Project1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoScreenshot/.pytest_cache/v/cache/nodeids" beforeDir="false" afterPath="$PROJECT_DIR$/AutoScreenshot/.pytest_cache/v/cache/nodeids" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoScreenshot/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/AutoScreenshot/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoScreenshot/test_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/AutoScreenshot/test_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/POM/TestCase/test_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/POM/TestCase/test_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/POM_model/BasePage/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/POM_model/BasePage/base_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Plus自动化脚本/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/Plus自动化脚本/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plus自动化脚本/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Plus自动化脚本/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Plus自动化脚本/module/Case01_文稿.py" beforeDir="false" afterPath="$PROJECT_DIR$/Plus自动化脚本/module/Case01_文稿.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Plus自动化脚本/module/Case02_图集.py" beforeDir="false" afterPath="$PROJECT_DIR$/Plus自动化脚本/module/Case02_图集.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Plus自动化脚本/module/Case03_外链.py" beforeDir="false" afterPath="$PROJECT_DIR$/Plus自动化脚本/module/Case03_外链.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Plus自动化脚本/module/Case04_专题.py" beforeDir="false" afterPath="$PROJECT_DIR$/Plus自动化脚本/module/Case04_专题.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Plus自动化脚本/module/Case05_视频.py" beforeDir="false" afterPath="$PROJECT_DIR$/Plus自动化脚本/module/Case05_视频.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Plus自动化脚本/module/Case06_音频.py" beforeDir="false" afterPath="$PROJECT_DIR$/Plus自动化脚本/module/Case06_音频.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plus自动化脚本/module/Case07_发布库.py" beforeDir="false" afterPath="$PROJECT_DIR$/Plus自动化脚本/module/Case07_发布库.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plus自动化脚本/module/Case08_资源库.py" beforeDir="false" afterPath="$PROJECT_DIR$/Plus自动化脚本/module/Case08_资源库.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plus自动化脚本/module/Case09_报料.py" beforeDir="false" afterPath="$PROJECT_DIR$/Plus自动化脚本/module/Case09_报料.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plus自动化脚本/module/Case10_评论.py" beforeDir="false" afterPath="$PROJECT_DIR$/Plus自动化脚本/module/Case10_评论.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plus自动化脚本/module/Case12_会员.py" beforeDir="false" afterPath="$PROJECT_DIR$/Plus自动化脚本/module/Case12_会员.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plus自动化脚本/module/Case15_审稿.py" beforeDir="false" afterPath="$PROJECT_DIR$/Plus自动化脚本/module/Case15_审稿.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plus自动化脚本/module/Case16_角色.py" beforeDir="false" afterPath="$PROJECT_DIR$/Plus自动化脚本/module/Case16_角色.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plus自动化脚本/module/Case17_用户.py" beforeDir="false" afterPath="$PROJECT_DIR$/Plus自动化脚本/module/Case17_用户.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plus自动化脚本/module/Case18_回收站.py" beforeDir="false" afterPath="$PROJECT_DIR$/Plus自动化脚本/module/Case18_回收站.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plus自动化脚本/module/Case19_积分商城.py" beforeDir="false" afterPath="$PROJECT_DIR$/Plus自动化脚本/module/Case19_积分商城.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plus自动化脚本/module/data_clean.py" beforeDir="false" afterPath="$PROJECT_DIR$/Plus自动化脚本/module/data_clean.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plus自动化脚本/reports/02-01 17:58:42.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plus自动化脚本/reports/03-02 11:54:43.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test1.py" beforeDir="false" afterPath="$PROJECT_DIR$/test1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test2.py" beforeDir="false" afterPath="$PROJECT_DIR$/test2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/南通/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/南通/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/南通/reports/03-10 15:02:49.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +50,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Python Unit Test" />
         <option value="Python Script" />
       </list>
     </option>
@@ -50,11 +77,13 @@
     <setting file="file://$PROJECT_DIR$/Plus自动化脚本/module/Case05_视频.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Plus自动化脚本/module/Case06_音频.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Plus自动化脚本/module/Case09_报料.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Plus自动化脚本/module/Case15_审稿.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Plus自动化脚本/module/Case18_回收站.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Plus自动化脚本/module/Case19_积分商城.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Plus自动化脚本/reports/plus自动化测试报告 10-28.html" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/test1.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/南通/UIAutomator2.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/南通/main.py" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -63,23 +92,26 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2BCKgSzHiZpmHtrkspvh21Mk7mf" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "auto.test.manager.delay": "1000",
-    "last_opened_file_path": "/Users/hoge/PycharmProjects/Project1/南通",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.VCS",
-    "two.files.diff.last.used.file": "/Users/hoge/PycharmProjects/Project1/Plus自动化脚本/module/Case01_文稿.py"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;auto.test.manager.delay&quot;: &quot;1000&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/liu/PycharmProjects/Project1/_Work/PageObject&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;/Users/hoge/PycharmProjects/Project1/Plus自动化脚本/module/Case01_文稿.py&quot;
   }
-}]]></component>
+}</component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings module-name="Project1" is-module-sdk="true">
@@ -98,21 +130,21 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\liu\PycharmProjects\Project1\_Work\PageObject" />
+      <recent name="C:\Users\liu\PycharmProjects\Project1" />
+      <recent name="C:\Users\liu\PycharmProjects\Project1\Work" />
       <recent name="$PROJECT_DIR$/南通" />
       <recent name="$PROJECT_DIR$/Api_auto_excel" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/AutoScreenshot" />
-      <recent name="$PROJECT_DIR$/POM2/TestCase" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Plus自动化脚本/reports" />
-      <recent name="$PROJECT_DIR$/南通" />
-      <recent name="$PROJECT_DIR$/Api_auto_yaml/data" />
-      <recent name="$PROJECT_DIR$/Api_auto_yaml/common" />
-      <recent name="$PROJECT_DIR$/Api_auto_excel" />
+      <recent name="C:\Users\liu\PycharmProjects\Project1\Work" />
+      <recent name="C:\Users\liu\PycharmProjects\Project1\Work\TestCase" />
+      <recent name="C:\Users\liu\PycharmProjects\Project1\练习" />
+      <recent name="$PROJECT_DIR$/Plus自动化脚本/module" />
+      <recent name="$PROJECT_DIR$/Plus自动化脚本/assets" />
     </key>
   </component>
-  <component name="RunManager" selected="Python 测试.Case01_文稿.test 的 Python 测试">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Project1" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -121,11 +153,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AutoScreenshot" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/_Work" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AutoScreenshot/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/_Work/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -134,69 +166,77 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Case01_文稿.test 的 Python 测试" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest (test_1.py 内)" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Project1" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Plus自动化脚本/module" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/_Work/TestCase" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;Case01_文稿.test&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Case01_文稿.test.test_11 的 Python 测试" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="Project1" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Plus自动化脚本/module" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;Case01_文稿.test.test_11&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Case01_文稿.test.test_14 的 Python 测试" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="Project1" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Plus自动化脚本/module" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;Case01_文稿.test.test_14&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python 测试 (Case01_文稿.py 内)" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="Project1" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Plus自动化脚本/module" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/Plus自动化脚本/module/Case01_文稿.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/_Work/TestCase/test_1.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_1.Test.test_03 的 pytest" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Project1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/_Work/TestCase" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_1.Test.test_03&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_1.Test.test_10 的 pytest" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Project1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/_Work/TestCase" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_1.Test.test_10&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_1.Test.test_11 的 pytest" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Project1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/_Work/TestCase" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_1.Test.test_11&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python 测试.Case01_文稿.test 的 Python 测试" />
-        <item itemvalue="Python 测试.Python 测试 (Case01_文稿.py 内)" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python 测试.Case01_文稿.test.test_11 的 Python 测试" />
-        <item itemvalue="Python 测试.Case01_文稿.test.test_14 的 Python 测试" />
+        <item itemvalue="Python 测试.test_1.Test.test_11 的 pytest" />
+        <item itemvalue="Python 测试.pytest (test_1.py 内)" />
+        <item itemvalue="Python 测试.test_1.Test.test_10 的 pytest" />
+        <item itemvalue="Python 测试.test_1.Test.test_03 的 pytest" />
       </list>
     </recent_temporary>
   </component>
@@ -223,12 +263,44 @@
       <option name="project" value="LOCAL" />
       <updated>1678945234495</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1">
+      <created>1678950750690</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678950750690</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="10c1dd49-94d0-476e-8f8e-afd702cc3a3e">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:/Users/hoge/PycharmProjects/Project1/Plus自动化脚本" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>

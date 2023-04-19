@@ -179,6 +179,7 @@ class test(unittest.TestCase):
         ac(self.plus.driver).move_to_element(ele[-1]).perform()
         before = ele[-1].text
         self.plus.click(f'/html/body/div[1]/div[2]/div[3]/ui-view/div/div[2]/ks-swiper-container/div/div[2]/div[1]/div[3]/div[{len(ele)}]/div[2]/i[1]')  # 编辑按钮
+        sleep(1)
         self.plus.send_key('/html/body/div[3]/div/div/form/div[2]/div[1]/input', Keys.BACK_SPACE)
         sleep(2)
         self.plus.click('/html/body/div[3]/div/div/form/div[3]/button[1]')

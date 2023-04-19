@@ -1,15 +1,2 @@
-class test():
-    def __init__(self):
-        print('init')
-
-    def go(self):
-        print('go')
-
-
-import unittest
-
-
-class se(unittest.TestCase, test):
-
-    def test_01(self):
-        self.go()
+list = [i ** i for i in range(10)]
+print(list)

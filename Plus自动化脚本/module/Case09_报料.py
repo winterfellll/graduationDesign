@@ -36,6 +36,7 @@ class test(unittest.TestCase):
         ac(self.plus.driver).move_to_element(ele[-1]).perform()
         before = ele[-1].text
         self.plus.click(f'/html/body/div[1]/div[2]/div[3]/ui-view/div/div[2]/ks-swiper-container/div/div[2]/div[1]/div[3]/div[{len(ele)}]/div[2]/i[1]')  # 编辑按钮
+        sleep(1)
         self.plus.send_key('/html/body/div[3]/div/div/form/div[2]/div[1]/input', Keys.BACK_SPACE)
         sleep(2)
         self.plus.click('/html/body/div[3]/div/div/form/div[3]/button[1]')
@@ -130,10 +131,10 @@ class test(unittest.TestCase):
         self.plus.click('/html/body/div[1]/div[2]/div[1]/div[1]/div[1]/div/div[3]/span[1]')
         sleep(5)
         before1 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[2]/div/div/div/div').text
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/classify-sidebar/div/div[3]/div/div[2]/div/div')
+        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/classify-sidebar/div/div[2]/div/div[2]/div/div')
         sleep(2)
         after1 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[2]/div/div/div/div').text
-        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/classify-sidebar/div/div[1]/span[1]')
+        self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/classify-sidebar/div/div[1]/span')
         sleep(3)
 
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[2]/div/div/div/div/div[2]/div/div[1]/div[1]/button')  # 全部状态按钮
@@ -330,9 +331,7 @@ class test(unittest.TestCase):
 
         text3 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[2]/div/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[2]/div[2]/div[2]/p').text
         self.plus.click('/html/body/div[1]/div[2]/div[1]/div[1]/ul/li[7]/i')
-        self.plus.click('self.plus.driver.find_element(By.LINK_TEXT,'
-        文稿
-        ').click()')  # 文稿
+        self.plus.driver.find_element(By.LINK_TEXT, '文稿').click()  # 文稿
         sleep(5)
         text4 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[3]/div[2]/div[1]/a/span').text
         self.plus.driver.back()
@@ -378,9 +377,7 @@ class test(unittest.TestCase):
 
         context1 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[2]/div/div/div/div/div[2]/div/div[3]/div[10]/div[1]/div[2]/div[2]/div[2]/p')
         self.plus.click('/html/body/div[1]/div[2]/div[1]/div[1]/ul/li[7]/i')
-        self.plus.click('self.plus.driver.find_element(By.LINK_TEXT,'
-        文稿
-        ').click()')  # 文稿
+        self.plus.driver.find_element(By.LINK_TEXT, '文稿').click()  # 文稿
         sleep(5)
         context2 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[3]/div[2]/div[1]/a/span').text
         self.plus.driver.back()

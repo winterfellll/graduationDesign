@@ -19,8 +19,13 @@ user_import_path = assetsPath + '1.xls'
 
 # v1.7.5.1.0
 class base():
-    wengao_lanmu = '/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[8]'
-    qita_lanmu = '/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[7]'
+    wengao_lanmu = '/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[8]'  # 第一条稿件发布栏目
+    qita_lanmu = '/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[7]'  # 第一条稿件发布栏目
+    shipin_lanmu = '/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[7]'  # 第一条视频稿件发布栏目
+    more_button10 = '/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[10]'  # 更多按钮
+    more_button11 = '/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[11]'  # 更多按钮
+    status = '/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[5]/div/span'  # 第一条稿件状态
+    first_ = '/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]'  # 列表第一条稿件
 
     def __init__(self, module):
         # 无头模式启动
@@ -38,17 +43,17 @@ class base():
         self.send_key('/html/body/div[1]/div[1]/div[1]/div/form/div[2]/div/input', 'liujifeng')
         self.send_key('/html/body/div[1]/div[1]/div[1]/div/form/div[3]/div/div/input', 'ljfHoge@2022\n')
         sleep(1)
-        self.click('/html/body/div/div[1]/div[5]/div/div[3]/div[1]/div/img')
+        self.click('/html/body/div/div[1]/div[5]/div/div[2]/div[1]/div/img')
         windows = self.driver.window_handles
         self.driver.switch_to.window(windows[1])
-        sleep(5)
+        sleep(8)
         self.click('/html/body/div[1]/div[2]/div[1]/div[1]/ul/li[7]/i')
         self.driver.find_element(By.LINK_TEXT, module).click()
         sleep(5)
 
     def find(self, ele):
         element = self.driver.find_element(By.XPATH, ele)
-        self.driver.execute_script("arguments[0].style.border='3px solid red'", element)
+        self.driver.execute_script("arguments[0].style.border='2px solid red'", element)
         return element
 
     def finds(self, ele):
@@ -62,27 +67,27 @@ class base():
 
     def fc(self, ele):
         element = self.driver.find_element(By.CSS_SELECTOR, ele)
-        self.driver.execute_script("arguments[0].style.border='3px solid red'", element)
+        self.driver.execute_script("arguments[0].style.border='2px solid red'", element)
         return element
 
     def tishen(self):
         # 提审一条文稿
         self.click('/html/body/div[1]/div[2]/div[1]/div[1]/ul/li[7]/i')
-        self.click('/html/body/div[1]/div[2]/div[1]/div[1]/div[2]/ul[1]/li[1]/a')  # 文稿
+        self.driver.find_element(By.LINK_TEXT, '文稿').click()  # 文稿
         sleep(5)
-        self.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[8]/div/i')
-        self.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[8]/div/div/div/button[7]')  # 提审
-        sleep(2)
-        self.click('/html/body/div[4]/div/div/div/div[2]/div[2]/button[2]')
+        self.click(self.more_button11)
+        self.click(self.more_button11 + '/div/div/div/button[8]')  # 提审
+        sleep(3)
+        self.fc("body > div.modal.fade.ng-isolate-scope.showAudit.in > div > div > div > div.body-audit.ng-scope > div.modal-footer > button.btn.btn-primary.button.ng-scope").click()
         sleep(2)
         self.click('/html/body/div[1]/div[2]/div[1]/div[1]/ul/li[7]/i')
-        self.click('/html/body/div[1]/div[2]/div[1]/div[1]/ul/li[7]/div/div[2]/div[6]/ul/li[4]/a')
+        self.driver.find_element(By.LINK_TEXT, '审稿').click()
         sleep(3)
 
     def fabu(self):
         # 发布一条文稿
         self.click('/html/body/div[1]/div[2]/div[1]/div[1]/ul/li[7]/i')
-        self.click('/html/body/div[1]/div[2]/div[1]/div[1]/div[2]/ul[1]/li[1]/a')  # 文稿
+        self.driver.find_element(By.LINK_TEXT, '文稿').click()  # 文稿
         sleep(5)
         self.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[1]/div[1]/div[1]/label/input')
         self.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[1]/div[2]/div/div/div/div[2]/div/div[3]/div[11]/div[2]/div/button[1]')  # 审核
@@ -137,6 +142,7 @@ class base():
         self.click('/html/body/div[3]/div/div/form/div[3]/button[1]')
         sleep(2)
         self.after = ele[-1].text
+
         self.length1 = len(self.finds('/html/body/div[1]/div[2]/div[3]/ui-view/div/div[2]/ks-swiper-container/div/div[2]/div[1]/div[3]/div'))
         ac(self.driver).move_to_element(ele[-1]).perform()
         self.click(f'/html/body/div[1]/div[2]/div[3]/ui-view/div/div[2]/ks-swiper-container/div/div[2]/div[1]/div[3]/div[{len(ele)}]/div[2]/i[2]')  # 删除按钮

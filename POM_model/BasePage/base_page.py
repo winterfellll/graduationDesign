@@ -6,10 +6,6 @@ import sys
 
 # pages基类
 class Page(object):
-    """
-        Page基类，所有page都应该继承该类
-    """
-
     def __init__(self, driver, base_url=u"http://www.baidu.com"):
         self.driver = driver
         self.base_url = base_url

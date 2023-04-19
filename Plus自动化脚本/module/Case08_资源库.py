@@ -33,6 +33,7 @@ class test(unittest.TestCase):
         '''文件上传按钮验证F'''
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[2]/div/div[2]/div[1]/div[1]/span[2]')
         self.plus.send_key('//*[@id="input-inner"]', video_path)
+        self.plus.send_key('//*[@id="input-inner"]', picture_path)
         self.plus.click('/html/body/div[4]/div/div/div/div/div/div[4]/button')  # 上传
         sleep(5)
         text1 = self.plus.find('/html/body/div[4]/div/div/div/div/div/div[3]/div[2]/div/div[3]/span/span').text
@@ -179,7 +180,8 @@ class test(unittest.TestCase):
         before = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[2]/div/div[2]/ul/li[2]/div[1]/span[1]/span').text
         ac(self.plus.driver).move_to_element(self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[2]/div/div[2]/ul/li[2]/div[1]/span[1]')).perform()
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[2]/div/div[2]/ul/li[2]/div[1]/span[2]/i[2]')  # 删除
-        self.plus.click('/html/body/div[4]/div/div/div/div/div[3]/button[1]')
+        sleep(2)
+        self.plus.fc(".btn-sure").click()
         sleep(2)
         after = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[2]/div/div[2]/ul/li[2]/div[1]/span[1]/span').text
 
@@ -251,4 +253,4 @@ class test(unittest.TestCase):
         sleep(3)
         text2 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[2]/div/div[2]/div[3]/page-nation/div/span').text
 
-        self.assertNotEqual(text1, text2, '文件和文件夹同时选中时能删除')
+        self.assertEqual(text1, text2, '文件和文件夹同时选中时能删除')

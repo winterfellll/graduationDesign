@@ -37,8 +37,6 @@ class test(unittest.TestCase):
         self.plus.send_key('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[2]/div[1]/div[2]/div[2]/textarea', 'test1')
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[2]/div[2]/div[2]/div/label[2]/input')
         sleep(2)
-        self.plus.fc('#view > ui-view > div > div > div.edit-form > div:nth-child(3) > div.card-body.ng-isolate-scope > div > div:nth-child(1) > div.list-box > div > div.item > label > input[type=checkbox]').click()
-        sleep(1)
         text1 = self.plus.find('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[2]/div[3]/div[2]/div/div[1]/div[2]/div/div[2]/div[1]/div').text
         self.plus.click('/html/body/div[1]/div[2]/div[3]/ui-view/div/div/div[2]/div[3]/div[2]/div/div[1]/div[2]/div/div[2]/div[1]/label/input')
         sleep(1)
