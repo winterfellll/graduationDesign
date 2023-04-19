@@ -4,35 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da8e2acd-5be7-4585-8c88-4833ac54eebc" name="变更" comment="1">
+    <list default="true" id="da8e2acd-5be7-4585-8c88-4833ac54eebc" name="变更" comment="fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Work/Common/read_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/_Work/Common/read_file.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Work/TestCase/test_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/_Work/TestCase/test_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Work/TestReport/data/attachments/3219a57e430ef87c.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_Work/TestReport/data/behaviors.json" beforeDir="false" afterPath="$PROJECT_DIR$/_Work/TestReport/data/behaviors.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Work/TestReport/data/categories.json" beforeDir="false" afterPath="$PROJECT_DIR$/_Work/TestReport/data/categories.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Work/TestReport/data/packages.json" beforeDir="false" afterPath="$PROJECT_DIR$/_Work/TestReport/data/packages.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Work/TestReport/data/suites.csv" beforeDir="false" afterPath="$PROJECT_DIR$/_Work/TestReport/data/suites.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Work/TestReport/data/suites.json" beforeDir="false" afterPath="$PROJECT_DIR$/_Work/TestReport/data/suites.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Work/TestReport/data/test-cases/4d29769b835a7c7f.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Work/TestReport/data/test-cases/8fffa19df6ae2f61.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Work/TestReport/data/test-cases/bce9174e1470bdbe.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_Work/TestReport/data/timeline.json" beforeDir="false" afterPath="$PROJECT_DIR$/_Work/TestReport/data/timeline.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Work/TestReport/export/influxDbData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_Work/TestReport/export/influxDbData.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Work/TestReport/export/prometheusData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_Work/TestReport/export/prometheusData.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Work/TestReport/history/duration-trend.json" beforeDir="false" afterPath="$PROJECT_DIR$/_Work/TestReport/history/duration-trend.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Work/TestReport/history/history.json" beforeDir="false" afterPath="$PROJECT_DIR$/_Work/TestReport/history/history.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Work/TestReport/widgets/duration-trend.json" beforeDir="false" afterPath="$PROJECT_DIR$/_Work/TestReport/widgets/duration-trend.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Work/TestReport/widgets/duration.json" beforeDir="false" afterPath="$PROJECT_DIR$/_Work/TestReport/widgets/duration.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Work/TestReport/widgets/severity.json" beforeDir="false" afterPath="$PROJECT_DIR$/_Work/TestReport/widgets/severity.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Work/TestReport/widgets/status-chart.json" beforeDir="false" afterPath="$PROJECT_DIR$/_Work/TestReport/widgets/status-chart.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Work/TestReport/widgets/summary.json" beforeDir="false" afterPath="$PROJECT_DIR$/_Work/TestReport/widgets/summary.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Work/allure-results/0769b681-d395-4328-bd0f-a99b6d74e774-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Work/allure-results/3171dc54-2060-4f36-b3df-18e372fd8283-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Work/allure-results/9822177d-56f6-4439-8aa2-f91dfab3f8c6-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Work/allure-results/b3bc47e6-c3cf-4ea2-9210-a3cdbff99208-attachment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Work/allure-results/c3591649-100d-4499-9bba-f7b662a0958a-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Work/allure-results/f20d1af2-b697-43b7-ba40-296a53db3e35-result.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_Work/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/_Work/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -253,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681896387969</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix">
+      <created>1681900173398</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1681900173398</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -306,6 +297,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
 </project>
