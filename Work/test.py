@@ -6,8 +6,3 @@
 # list2 = [2]
 #
 # assert list1 != list2, '123'
-
-
-import shutil
-
-shutil.move("C:/ProgramData/Jenkins/workspace/毕业设计/_Work/report.zip", "C:\ProgramData\Jenkins\workspace\毕业设计")
