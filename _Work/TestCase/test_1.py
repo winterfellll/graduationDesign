@@ -18,7 +18,7 @@ class Test():
     def test_01(self, driver):
         homePage(driver).myShelf_click()
         url = driver.current_url
-        assert 'login' not in url, '未登录时进入书架未跳转到登录页面'
+        assert 'login' in url, '未登录时进入书架未跳转到登录页面'
 
     @allure.title('未登录时进入充值模块')
     def test_02(self, driver):
