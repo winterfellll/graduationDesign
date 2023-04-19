@@ -1,7 +1,7 @@
 # 作家专区
 from time import sleep
 from selenium.webdriver.common.by import By
-from _Work.Common.base_page import basePage
+from Work.Common.base_page import basePage
 
 
 class applyAuthorPage(basePage):

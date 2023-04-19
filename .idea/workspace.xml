@@ -6,18 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="da8e2acd-5be7-4585-8c88-4833ac54eebc" name="变更" comment="fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Work/TestReport/data/behaviors.json" beforeDir="false" afterPath="$PROJECT_DIR$/_Work/TestReport/data/behaviors.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Work/TestReport/data/categories.json" beforeDir="false" afterPath="$PROJECT_DIR$/_Work/TestReport/data/categories.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Work/TestReport/data/packages.json" beforeDir="false" afterPath="$PROJECT_DIR$/_Work/TestReport/data/packages.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Work/TestReport/data/suites.csv" beforeDir="false" afterPath="$PROJECT_DIR$/_Work/TestReport/data/suites.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Work/TestReport/data/suites.json" beforeDir="false" afterPath="$PROJECT_DIR$/_Work/TestReport/data/suites.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Work/TestReport/data/timeline.json" beforeDir="false" afterPath="$PROJECT_DIR$/_Work/TestReport/data/timeline.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Work/TestReport/export/influxDbData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_Work/TestReport/export/influxDbData.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Work/TestReport/history/history.json" beforeDir="false" afterPath="$PROJECT_DIR$/_Work/TestReport/history/history.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Work/TestReport/widgets/duration.json" beforeDir="false" afterPath="$PROJECT_DIR$/_Work/TestReport/widgets/duration.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Work/TestReport/widgets/severity.json" beforeDir="false" afterPath="$PROJECT_DIR$/_Work/TestReport/widgets/severity.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Work/TestReport/widgets/status-chart.json" beforeDir="false" afterPath="$PROJECT_DIR$/_Work/TestReport/widgets/status-chart.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Work/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/_Work/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Work/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/_Work/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +88,7 @@
       <recent name="$PROJECT_DIR$/Plus自动化脚本/assets" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.test">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Work" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -142,6 +131,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Work" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/_Work" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/_Work/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="pytest (test_1.py 内)" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Project1" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -156,22 +166,6 @@
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/_Work/TestCase/test_1.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test_1.Test.test_10 的 pytest" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="Project1" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/_Work/TestCase" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_1.Test.test_10&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="test_1.Test.test_11 的 pytest" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
@@ -192,11 +186,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.read_file" />
         <item itemvalue="Python 测试.test_1.Test.test_11 的 pytest" />
         <item itemvalue="Python 测试.pytest (test_1.py 内)" />
-        <item itemvalue="Python 测试.test_1.Test.test_10 的 pytest" />
       </list>
     </recent_temporary>
   </component>
@@ -244,7 +238,21 @@
       <option name="project" value="LOCAL" />
       <updated>1681900173398</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fix">
+      <created>1681904173957</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681904173957</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fix">
+      <created>1681904180975</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1681904180975</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

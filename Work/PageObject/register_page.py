@@ -1,8 +1,8 @@
 # 注册
 import os
 from selenium.webdriver.common.by import By
-from _Work.Common.base_page import basePage
-from _Work.PageObject.topBar import topBar
+from Work.Common.base_page import basePage
+from Work.PageObject.topBar import topBar
 import ddddocr
 from faker import Faker
 from time import sleep

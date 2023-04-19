@@ -3,7 +3,7 @@ import os
 import allure
 import pytest
 from selenium import webdriver
-from _Work.Common.read_file import browser, url
+from Work.Common.read_file import browser, url
 
 
 @pytest.fixture(scope='module', autouse=True)

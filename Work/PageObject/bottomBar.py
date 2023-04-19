@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from _Work.Common.base_page import basePage
+from Work.Common.base_page import basePage
 
 
 class bottomBar(basePage):

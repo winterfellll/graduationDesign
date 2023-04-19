@@ -1,8 +1,8 @@
 # 书籍详情
 from time import sleep
 from selenium.webdriver.common.by import By
-from _Work.Common.base_page import basePage
-from _Work.PageObject.read_page import readPage
+from Work.Common.base_page import basePage
+from Work.PageObject.read_page import readPage
 
 
 class detailPage(basePage):

@@ -1,9 +1,9 @@
 # 首页
 from time import sleep
 from selenium.webdriver.common.by import By
-from _Work.Common.base_page import basePage
-from _Work.PageObject.topBar import topBar
-from _Work.PageObject.bottomBar import bottomBar
+from Work.Common.base_page import basePage
+from Work.PageObject.topBar import topBar
+from Work.PageObject.bottomBar import bottomBar
 
 
 class homePage(basePage):

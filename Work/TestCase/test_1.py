@@ -1,16 +1,16 @@
-from _Work.PageObject.home_page import homePage
-from _Work.PageObject.allworks_page import allbooksPage
-from _Work.PageObject.applyAuthor_page import applyAuthorPage
-from _Work.PageObject.bottomBar import bottomBar
-from _Work.PageObject.login_page import loginPage
-from _Work.PageObject.ranking_page import rankingPage
-from _Work.PageObject.recharge_page import rechargePage
-from _Work.PageObject.register_page import registerPage
-from _Work.PageObject.topBar import topBar
-from _Work.PageObject.detail_page import detailPage
+from Work.PageObject.home_page import homePage
+from Work.PageObject.allworks_page import allbooksPage
+from Work.PageObject.applyAuthor_page import applyAuthorPage
+from Work.PageObject.bottomBar import bottomBar
+from Work.PageObject.login_page import loginPage
+from Work.PageObject.ranking_page import rankingPage
+from Work.PageObject.recharge_page import rechargePage
+from Work.PageObject.register_page import registerPage
+from Work.PageObject.topBar import topBar
+from Work.PageObject.detail_page import detailPage
 from time import sleep
 import allure
-from _Work.Common.read_file import url
+from Work.Common.read_file import url
 
 
 class Test():
