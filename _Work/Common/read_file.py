@@ -11,7 +11,7 @@ def read_yaml(yaml_path):
 
 
 def config():
-    config = read_yaml(r"C:\Users\liu\PycharmProjects\Project1\_Work\config.yaml")
+    config = read_yaml("../config.yaml")
     return config
 
 
