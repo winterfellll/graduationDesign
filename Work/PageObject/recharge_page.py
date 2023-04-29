@@ -34,6 +34,6 @@ class rechargePage(basePage):
     def leave_message(self):
         self.click(self.message)
         sleep(1)
-        self.switchHandler(1)
+        self.switchWindow(1)
         url = self.getCurrentURL()
         assert url == 'http://novel.hctestedu.com/user/feedback.html', '充值页面反馈留言跳转失败'

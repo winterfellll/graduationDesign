@@ -85,7 +85,7 @@ class homePage(basePage):
 
     def goto_zuojiazhuanqu(self):
         self.click(topBar.zuojiazhuanqu)
-        self.switchHandler(1)
+        self.switchWindow(1)
         sleep(2)
 
     def logo_click(self):

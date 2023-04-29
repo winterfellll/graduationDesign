@@ -3,9 +3,9 @@ class basePage():
         self.driver = driver
 
     def locator(self, args):
-        element = self.driver.find_element(*args)
-        self.driver.execute_script("arguments[0].style.border='2px solid red'", element)
-        return element
+        ele = self.driver.find_element(*args)
+        self.driver.execute_script("arguments[0].style.border='2px solid red'", ele)
+        return ele
 
     def send_key(self, args, keyword):
         self.locator(args).send_keys(keyword)
@@ -16,7 +16,7 @@ class basePage():
     def back(self):
         self.driver.back()
 
-    def switchHandler(self, i):
+    def switchWindow(self, i):
         handles = self.driver.window_handles
         self.driver.switch_to.window(handles[i])
 

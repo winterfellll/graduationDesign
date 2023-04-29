@@ -1,3 +1,5 @@
+import pytest
+
 from Work.PageObject.home_page import homePage
 from Work.PageObject.allworks_page import allbooksPage
 from Work.PageObject.applyAuthor_page import applyAuthorPage
