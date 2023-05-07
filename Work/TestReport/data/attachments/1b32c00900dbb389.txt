@@ -1,0 +1,2 @@
+INFO     root:base_page.py:20 点击
+INFO     root:base_page.py:11 元素定位 元素文本：反馈留言  元素定位方式：('css selector', "[href='/user/feedback.html']")

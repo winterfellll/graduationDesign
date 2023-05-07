@@ -1,0 +1,2 @@
+INFO     root:base_page.py:20 点击
+INFO     root:base_page.py:11 元素定位 元素文本：我的书架  元素定位方式：('xpath', '/html/body/div[1]/div[2]/div/div[2]/a')

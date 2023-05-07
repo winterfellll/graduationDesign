@@ -1,0 +1,2 @@
+INFO     root:base_page.py:20 点击
+INFO     root:base_page.py:11 元素定位 元素文本：开局得到如来舍利  元素定位方式：('xpath', '/html/body/div[2]/div[3]/div[1]/div[2]/div[1]/div/h4/a')

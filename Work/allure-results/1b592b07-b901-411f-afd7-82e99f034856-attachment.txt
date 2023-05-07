@@ -1,0 +1,4 @@
+INFO     root:base_page.py:20 点击
+INFO     root:base_page.py:11 元素定位 元素文本：排行榜  元素定位方式：('xpath', '/html/body/div[1]/div[3]/div/ul/li[3]/a')
+INFO     root:base_page.py:20 点击
+INFO     root:base_page.py:11 元素定位 元素文本：  元素定位方式：('xpath', '/html/body/div[1]/div[2]/div/a/img')

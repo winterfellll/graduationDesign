@@ -1,0 +1,4 @@
+INFO     root:base_page.py:11 元素定位 元素文本：历史军事  元素定位方式：('xpath', '/html/body/div[2]/div[1]/div/ul/li[2]/span[3]/a[2]')
+INFO     root:base_page.py:20 点击
+INFO     root:base_page.py:11 元素定位 元素文本：历史军事  元素定位方式：('xpath', '/html/body/div[2]/div[1]/div/ul/li[2]/span[3]/a[2]')
+INFO     root:base_page.py:11 元素定位 元素文本：[历史军事]  元素定位方式：('xpath', '/html/body/div[2]/div[2]/div/table/tbody/tr[1]/td[2]/a')

@@ -1,0 +1,12 @@
+INFO     root:base_page.py:20 点击
+INFO     root:base_page.py:11 元素定位 元素文本：注册  元素定位方式：('xpath', '/html/body/div[1]/div[2]/div/div[2]/span/a[2]')
+INFO     root:base_page.py:11 元素定位 元素文本：  元素定位方式：('xpath', '//*[@id="chkd"]')
+INFO     root:base_page.py:16 输入13578431573
+INFO     root:base_page.py:11 元素定位 元素文本：  元素定位方式：('xpath', '//*[@id="txtUName"]')
+INFO     root:base_page.py:16 输入admin123
+INFO     root:base_page.py:11 元素定位 元素文本：  元素定位方式：('xpath', '//*[@id="txtPassword"]')
+INFO     root:base_page.py:16 输入7914
+INFO     root:base_page.py:11 元素定位 元素文本：  元素定位方式：('xpath', '//*[@id="TxtChkCode"]')
+INFO     root:base_page.py:20 点击
+INFO     root:base_page.py:11 元素定位 元素文本：  元素定位方式：('xpath', '//*[@id="btnRegister"]')
+INFO     root:base_page.py:11 元素定位 元素文本：13578431573  元素定位方式：('xpath', '/html/body/div[1]/div[2]/div/div[2]/span/a[1]')

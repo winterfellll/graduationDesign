@@ -1,0 +1,2 @@
+INFO     root:base_page.py:20 点击
+INFO     root:base_page.py:11 元素定位 元素文本：[玄幻奇幻]  元素定位方式：('xpath', '/html/body/div[2]/div[4]/div[1]/div[2]/table/tbody/tr[1]/td[1]/a')

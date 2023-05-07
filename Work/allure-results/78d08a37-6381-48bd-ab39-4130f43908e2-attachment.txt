@@ -1,0 +1,9 @@
+INFO     root:base_page.py:20 点击
+INFO     root:base_page.py:11 元素定位 元素文本：登录  元素定位方式：('xpath', '/html/body/div[1]/div[2]/div/div[2]/span/a[1]')
+INFO     root:base_page.py:16 输入18571137076
+INFO     root:base_page.py:11 元素定位 元素文本：  元素定位方式：('xpath', '//*[@id="txtUName"]')
+INFO     root:base_page.py:16 输入qq2312750867
+INFO     root:base_page.py:11 元素定位 元素文本：  元素定位方式：('xpath', '//*[@id="txtPassword"]')
+INFO     root:base_page.py:20 点击
+INFO     root:base_page.py:11 元素定位 元素文本：  元素定位方式：('xpath', '//*[@id="btnLogin"]')
+INFO     root:base_page.py:11 元素定位 元素文本：18571137076  元素定位方式：('xpath', '/html/body/div[1]/div[2]/div/div[2]/span/a[1]')

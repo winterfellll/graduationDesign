@@ -1,0 +1,2 @@
+INFO     root:base_page.py:20 点击
+INFO     root:base_page.py:11 元素定位 元素文本：作家专区  元素定位方式：('xpath', '/html/body/div[1]/div[3]/div/ul/li[5]/a')

@@ -1,0 +1,16 @@
+INFO     root:base_page.py:16 输入你
+INFO     root:base_page.py:11 元素定位 元素文本：  元素定位方式：('xpath', '//*[@id="searchKey"]')
+INFO     root:base_page.py:20 点击
+INFO     root:base_page.py:11 元素定位 元素文本：  元素定位方式：('xpath', '//*[@id="btnSearch"]')
+INFO     root:base_page.py:11 元素定位 元素文本：我的时光里，满满都是你  元素定位方式：('xpath', '/html/body/div[2]/div[2]/div/table/tbody/tr[1]/td[3]/a')
+INFO     root:base_page.py:11 元素定位 元素文本：曾想盛装嫁给你  元素定位方式：('xpath', '/html/body/div[2]/div[2]/div/table/tbody/tr[2]/td[3]/a')
+INFO     root:base_page.py:11 元素定位 元素文本：遇见世界和你  元素定位方式：('xpath', '/html/body/div[2]/div[2]/div/table/tbody/tr[3]/td[3]/a')
+INFO     root:base_page.py:11 元素定位 元素文本：你好  元素定位方式：('xpath', '/html/body/div[2]/div[2]/div/table/tbody/tr[4]/td[3]/a')
+INFO     root:base_page.py:11 元素定位 元素文本：你是天涯  元素定位方式：('xpath', '/html/body/div[2]/div[2]/div/table/tbody/tr[5]/td[3]/a')
+INFO     root:base_page.py:11 元素定位 元素文本：日期方式时候你的  元素定位方式：('xpath', '/html/body/div[2]/div[2]/div/table/tbody/tr[6]/td[3]/a')
+INFO     root:base_page.py:11 元素定位 元素文本：位置直接已经你们  元素定位方式：('xpath', '/html/body/div[2]/div[2]/div/table/tbody/tr[7]/td[3]/a')
+INFO     root:base_page.py:11 元素定位 元素文本：你好了  元素定位方式：('xpath', '/html/body/div[2]/div[2]/div/table/tbody/tr[8]/td[3]/a')
+INFO     root:base_page.py:16 输入你干嘛
+INFO     root:base_page.py:11 元素定位 元素文本：  元素定位方式：('xpath', '//*[@id="searchKey"]')
+INFO     root:base_page.py:20 点击
+INFO     root:base_page.py:11 元素定位 元素文本：  元素定位方式：('xpath', '//*[@id="searchKey"]')
