@@ -7,10 +7,42 @@
     <list default="true" id="da8e2acd-5be7-4585-8c88-4833ac54eebc" name="变更" comment="fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Work/Common/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Work/Common/base_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/PageObject/allworks_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Work/PageObject/allworks_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Work/PageObject/home_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Work/PageObject/home_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Work/PageObject/recharge_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Work/PageObject/recharge_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Work/TestCase/test_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Work/TestCase/test_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Work/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/TestCase/test_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Work/TestCase/TestCase.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/TestReport/data/attachments/c1df0710f89f8209.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/TestReport/data/behaviors.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Work/TestReport/data/behaviors.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/TestReport/data/behaviors.json" beforeDir="false" afterPath="$PROJECT_DIR$/Work/TestReport/data/behaviors.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/TestReport/data/categories.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Work/TestReport/data/categories.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/TestReport/data/categories.json" beforeDir="false" afterPath="$PROJECT_DIR$/Work/TestReport/data/categories.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/TestReport/data/packages.json" beforeDir="false" afterPath="$PROJECT_DIR$/Work/TestReport/data/packages.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/TestReport/data/suites.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Work/TestReport/data/suites.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/TestReport/data/suites.json" beforeDir="false" afterPath="$PROJECT_DIR$/Work/TestReport/data/suites.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/TestReport/data/test-cases/5e943fbb6939f318.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/TestReport/data/test-cases/6cf6a419bd142c7a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/TestReport/data/test-cases/72ed2cd9f7f2889b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/TestReport/data/timeline.json" beforeDir="false" afterPath="$PROJECT_DIR$/Work/TestReport/data/timeline.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/TestReport/export/influxDbData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Work/TestReport/export/influxDbData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/TestReport/export/prometheusData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Work/TestReport/export/prometheusData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/TestReport/history/categories-trend.json" beforeDir="false" afterPath="$PROJECT_DIR$/Work/TestReport/history/categories-trend.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/TestReport/history/duration-trend.json" beforeDir="false" afterPath="$PROJECT_DIR$/Work/TestReport/history/duration-trend.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/TestReport/history/history-trend.json" beforeDir="false" afterPath="$PROJECT_DIR$/Work/TestReport/history/history-trend.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/TestReport/history/history.json" beforeDir="false" afterPath="$PROJECT_DIR$/Work/TestReport/history/history.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/TestReport/history/retry-trend.json" beforeDir="false" afterPath="$PROJECT_DIR$/Work/TestReport/history/retry-trend.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/TestReport/widgets/behaviors.json" beforeDir="false" afterPath="$PROJECT_DIR$/Work/TestReport/widgets/behaviors.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/TestReport/widgets/categories-trend.json" beforeDir="false" afterPath="$PROJECT_DIR$/Work/TestReport/widgets/categories-trend.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/TestReport/widgets/categories.json" beforeDir="false" afterPath="$PROJECT_DIR$/Work/TestReport/widgets/categories.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/TestReport/widgets/duration-trend.json" beforeDir="false" afterPath="$PROJECT_DIR$/Work/TestReport/widgets/duration-trend.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/TestReport/widgets/duration.json" beforeDir="false" afterPath="$PROJECT_DIR$/Work/TestReport/widgets/duration.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/TestReport/widgets/history-trend.json" beforeDir="false" afterPath="$PROJECT_DIR$/Work/TestReport/widgets/history-trend.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/TestReport/widgets/retry-trend.json" beforeDir="false" afterPath="$PROJECT_DIR$/Work/TestReport/widgets/retry-trend.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/TestReport/widgets/severity.json" beforeDir="false" afterPath="$PROJECT_DIR$/Work/TestReport/widgets/severity.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/TestReport/widgets/status-chart.json" beforeDir="false" afterPath="$PROJECT_DIR$/Work/TestReport/widgets/status-chart.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/TestReport/widgets/suites.json" beforeDir="false" afterPath="$PROJECT_DIR$/Work/TestReport/widgets/suites.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/TestReport/widgets/summary.json" beforeDir="false" afterPath="$PROJECT_DIR$/Work/TestReport/widgets/summary.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/allure-results/100a9826-5e63-427c-ad5b-9fec0548bf23-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/allure-results/3dbad20a-bdfb-410a-a121-676634eae421-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Work/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Work/conftest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,8 +129,8 @@
       <recent name="C:\Users\liu\PycharmProjects\Project1\Work\TestCase" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test1">
-    <configuration name="read" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.main">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Work" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -106,11 +138,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Work" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\liu\PycharmProjects\Work\read.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Work/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -119,111 +151,69 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="read" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Work" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\liu\PycharmProjects\Work\Work\Common\read.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Work" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python 测试 (test1.py 内)" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="TestCase.Test_chongzhi 的 Python 测试" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Work" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Work/TestCase" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test1.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test1.Test 的 Python 测试" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="Work" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test1.Test&quot;" />
+      <option name="_new_target" value="&quot;TestCase.Test_chongzhi&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="test1.Test1 的 Python 测试" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="TestCase.Test_quanbuzuopin 的 Python 测试" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Work" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Work/TestCase" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test1.Test1&quot;" />
+      <option name="_new_target" value="&quot;TestCase.Test_quanbuzuopin&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="test1.Test.test_01 的 Python 测试" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="TestCase.Test_quanbuzuopin.test_03 的 Python 测试" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Work" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Work/TestCase" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test1.Test.test_01&quot;" />
+      <option name="_new_target" value="&quot;TestCase.Test_quanbuzuopin.test_03&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestCase.Test_quanbuzuopin.test_06 的 Python 测试" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Work" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Work/TestCase" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;TestCase.Test_quanbuzuopin.test_06&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test1" />
-        <item itemvalue="Python 测试.test1.Test1 的 Python 测试" />
-        <item itemvalue="Python 测试.Python 测试 (test1.py 内)" />
-        <item itemvalue="Python 测试.test1.Test 的 Python 测试" />
-        <item itemvalue="Python 测试.test1.Test.test_01 的 Python 测试" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python 测试.TestCase.Test_chongzhi 的 Python 测试" />
+        <item itemvalue="Python 测试.TestCase.Test_quanbuzuopin 的 Python 测试" />
+        <item itemvalue="Python 测试.TestCase.Test_quanbuzuopin.test_06 的 Python 测试" />
+        <item itemvalue="Python 测试.TestCase.Test_quanbuzuopin.test_03 的 Python 测试" />
       </list>
     </recent_temporary>
   </component>
@@ -299,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681914210430</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fix">
+      <created>1682767025533</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1682767025533</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

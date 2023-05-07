@@ -1,9 +1,12 @@
+import logging
 from time import sleep
 import os
 import allure
 import pytest
 from selenium import webdriver
 from Work.Common.read_file import browser, url
+
+logging.basicConfig(level=logging.INFO)
 
 
 @pytest.fixture(scope='module', autouse=True)
@@ -17,8 +20,8 @@ def driver():
         driver = webdriver.Edge()
     driver.get(url)
     driver.maximize_window()
-    driver.implicitly_wait(5)
-    sleep(3)
+    driver.implicitly_wait(3)
+    sleep(2)
     return driver
 
 

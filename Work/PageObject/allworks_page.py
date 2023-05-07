@@ -54,8 +54,17 @@ class allbooksPage(basePage):
 
     def getWordNumList(self):
         wordNumList = []
-        for i in range(20):
+        n = self.getLens((By.XPATH, '/html/body/div[2]/div[2]/div/table/tbody/tr'))
+        for i in range(n):
             text = self.getText((By.XPATH, f'/html/body/div[2]/div[2]/div/table/tbody/tr[{i + 1}]/td[6]'))
             num = float(text.split('万')[0])
             wordNumList.append(num)
         return wordNumList
+
+    def getBookList(self):
+        bookList = []
+        n = self.getLens((By.XPATH, '/html/body/div[2]/div[2]/div/table/tbody/tr'))
+        for i in range(n):
+            text = self.getText((By.XPATH, f'/html/body/div[2]/div[2]/div/table/tbody/tr[{i + 1}]/td[3]'))
+            bookList.append(text)
+        return bookList

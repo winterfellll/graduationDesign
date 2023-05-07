@@ -102,6 +102,11 @@ class homePage(basePage):
         for i in range(lens):
             text = self.getText((By.XPATH, f'/html/body/div[2]/div[2]/div/table/tbody/tr[{i + 1}]/td[3]/a'))
             assert '你' in text, '搜索结果异常'
+        self.send_key(topBar.search_input, '你干嘛')
+        self.click(topBar.search_input)
+        sleep(2)
+        len = self.getLens(self.searchResults)
+        assert len != 0, '搜索无结果时，无任何提示'
 
     # 底部
     def viewSwitch_click(self):
